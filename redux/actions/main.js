@@ -1,8 +1,8 @@
 import * as t from "../types";
 
-export const setInfo = (name) => dispatch => {
+export const setTitle = (title) => dispatch => {
   dispatch({
-    type: t.SET_NAME,
-    payload: name
+    type: t.SET_TITLE,
+    payload: title
   });
 }

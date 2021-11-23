@@ -505,26 +505,33 @@
 
 import { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { setInfo } from "../redux/actions/main"
+import { setTitle } from "../redux/actions/main"
+import { getTodoData } from './api/MockApi'
 import styles from '../styles/Home.module.css'
 
 function Home() {
-  const initialName = useSelector(state => state.main.name);
+  const title = useSelector(state => state.main.title);
   const dispatch = useDispatch()
-  const [newName, setName] = useState("")
+  const [id , setId] = useState();
+
+  const clickHandler = async () => {
+    const data = await getTodoData(id);
+    dispatch(setTitle(data?.data?.title))
+  }
 
   return (
     <div className={styles.container}>
-      <p>Enter a Name {initialName}:</p>
+      <p>Enter id to get title:</p>
       <input 
         type="text" 
-        value={newName} 
-        onChange={(e) => setName(e.target.value)}>
+        value={id} 
+        onChange={(e) => setId(e.target.value)}>
 
         </input>
-        <button onClick={() => dispatch(setInfo(newName))}>
+        <button onClick={() => clickHandler()}>
           Submit
         </button>
+        <h1>Title: {title}</h1>
     </div>
   )
 }
