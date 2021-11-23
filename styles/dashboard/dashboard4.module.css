@@ -1,0 +1,227 @@
+.d4ParentContainer {
+  background-color: var(--white);
+  border: 1px solid var(--light);
+  border-radius: 0.5rem;
+  padding: 2.5rem;
+  width: 100%;
+}
+.drmainParent {
+  width: 100%;
+  height: 100%;
+}
+.mainHeadingFull {
+  width: 100%;
+  background-color: var(--org);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 2.25rem;
+  font-weight: 700;
+  padding: 1.75rem 0;
+  border-radius: 0.5rem;
+}
+.mainHeadingFull p {
+  display: flex;
+  align-items: center;
+}
+.mainHeadingFull svg {
+  margin: 0 0 0 1.5rem;
+}
+.subscriptionGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
+  margin: 5rem 0 0 0;
+  padding: 0 0%;
+}
+.subscriptionGridBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+.subscriptionGridBox h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--td);
+}
+.subscriptionGridBox p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--tl);
+  text-align: center;
+  margin: 0 0 2.5rem 0;
+}
+.subscriptionGridBox h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--org);
+  margin: 1.5rem 0;
+}
+.subscriptionGrid > :nth-child(2) {
+  border-left: 2px solid var(--light);
+  border-right: 2px solid var(--light);
+}
+.courseDetailsP {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--td);
+  margin: 2.5rem 0 1.5rem 0;
+}
+.reviewGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  width: 100%;
+}
+.reviewGridBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bgc);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+}
+.reviewGrid p {
+  font-size: 1.5rem;
+  color: var(--tl);
+  font-weight: 500;
+  width: max-content;
+}
+.reviewGridBox main {
+  background-color: var(--white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 1000px;
+}
+.reviewGrid textarea {
+  height: 15rem;
+}
+.reviewGrid button {
+  width: max-content;
+}
+.savedLessonsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+  width: 100%;
+  margin: 2.5rem 0 0 0;
+}
+.videoLessonsGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
+  padding: 2.5rem 0;
+}
+.videoLessonsGrid2 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
+  padding: 2.5rem 0;
+}
+.videoLessonsGridBox {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.videoLessonsGridBox:hover img {
+  transform: scale(1.05);
+}
+.videoLessonsGridBox main {
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  border-radius: 1rem 1rem 0 0;
+}
+.videoLessonsGridBox img {
+  width: 100%;
+  height: 25rem;
+  transition: 0.75s;
+}
+.videoLessonsGridBox div {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: var(--lorg);
+  border-radius: 0 0 1rem 1rem;
+}
+.videoLessonsGridBox div h1 {
+  font-size: 1.75rem;
+  color: var(--org);
+  font-weight: 700;
+}
+.videoLessonsGridBox div span {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--tl);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+  margin: 0 0 0 0.5rem;
+}
+.videoLessonsGridBox div svg {
+  color: var(--org);
+  font-size: 2.5rem;
+  margin: 0 0.5rem 0 0;
+}
+@media screen and (max-width: 1250px) {
+  .videoLessonsGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.5rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .drmainParent {
+    padding: 0 1.5rem;
+  }
+  .mainHeadingFull {
+    font-size: 2rem;
+    padding: 1.25rem 0;
+  }
+  .d4ParentContainer {
+    padding: 1.5rem;
+    border: 1px solid var(--light);
+  }
+  .subscriptionGrid {
+    grid-template-columns: 1fr;
+    padding: 0;
+    grid-gap: 2.5rem;
+  }
+  .subscriptionGrid > :nth-child(2) {
+    border-left: 0 solid var(--light);
+    border-right: 0 solid var(--light);
+    border-top: 1px solid var(--light);
+    border-bottom: 1px solid var(--light);
+    padding: 2.5rem 0;
+  }
+  .reviewGridBox {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .reviewGrid p {
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .videoLessonsGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
+  }
+  .videoLessonsGrid2 {
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
+  }
+}

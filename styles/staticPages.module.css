@@ -1,0 +1,161 @@
+.staticBox {
+  padding: 5rem 0;
+}
+.staticBox img {
+  width: 100%;
+  height: 50rem;
+  object-fit: cover;
+  margin: 0 0 5rem 0;
+  border-radius: 1rem;
+}
+.mobileAppBanner {
+  width: 100%;
+  object-fit: cover;
+}
+.staticBox p {
+  font-size: 1.65rem;
+  color: var(--tl);
+  margin: 0 0 2.5rem 0;
+}
+.staticBox h2 {
+  font-size: 2.75rem;
+  color: var(--td);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+.staticBox h3 {
+  font-size: 1.75rem;
+  color: var(--td);
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+}
+.staticBox h3 span {
+  font-size: 1.5rem;
+  color: var(--dark);
+  font-weight: 400;
+  margin: 0 0 2.5rem 0;
+}
+.staticBox h4 {
+  font-size: 1.75rem;
+  color: var(--td);
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+}
+.staticBox i {
+  font-style: normal;
+  color: var(--org);
+}
+.staticBox span {
+  color: var(--dark);
+  font-weight: 400;
+}
+.staticBox h5 {
+  font-size: 1.65rem;
+  color: var(--td);
+  margin: 0 0 2.5rem 0;
+  font-weight: 500;
+}
+.staticBox ul {
+  padding: 0 0 0 5rem;
+}
+.staticBox li {
+  font-size: 1.65rem;
+  color: var(--tl);
+  margin: 0 0 1.5rem 0;
+  list-style: none;
+}
+.ndaAgree {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5rem 0 0 0;
+}
+.ndaAgree h6 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--org);
+  margin: 0 0 0 2.5rem;
+}
+.contactusGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
+  width: 100%;
+}
+.contactusGridBox h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 2.5rem 0;
+  color: var(--td);
+}
+.contactusGridBox h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 0 1.5rem 0;
+  color: var(--tl);
+}
+.contactusGridBox h2 svg {
+  color: var(--org);
+  margin: 0 1rem 0 0;
+  font-size: 2.5rem;
+}
+.contactusGridBox > * {
+  margin: 0 0 2.5rem 0;
+}
+.contactusGridBox textarea {
+  height: 15rem;
+}
+.contactusGridBox button {
+  min-width: 15rem;
+}
+.staticBoxContact {
+  padding: 5rem 0;
+}
+@media screen and (max-width: 1000px) {
+  .contactusGridBox h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 2.5rem 0;
+    color: var(--td);
+  }
+  .contactusGridBox h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 0 1.5rem 0;
+    color: var(--tl);
+  }
+  .contactusGridBox h2 svg {
+    color: var(--org);
+    margin: 0 1rem 0 0;
+    font-size: 1.75rem;
+  }
+}
+@media screen and (max-width: 850px) {
+  .staticBox h3 {
+    font-size: 1.5rem;
+  }
+  .staticBox h4 {
+    font-size: 1.5rem;
+  }
+  .staticBox p {
+    font-size: 1.5rem;
+  }
+  .staticBox ul {
+    padding: 0 0 0 2.5rem;
+  }
+  .staticBoxContact {
+    padding: 2.5rem 0;
+  }
+  .contactusGrid {
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
+  }
+}

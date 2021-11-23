@@ -1,0 +1,351 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+:root {
+  font-size: 10px;
+  --org: #ff6c0b;
+  --lorg: #ff6c0b0d;
+  --blue: #2b3044;
+  --bgc: #f7f8f9;
+  --white: #ffffff;
+  --black: #000000;
+  --light: #ececec;
+  --dark: #b5b5b5;
+  --tl: #5c6067;
+  --td: #252726;
+}
+::selection {
+  background: var(--lorg);
+  color: var(--org);
+}
+html,
+body {
+  width: 100%;
+  background-color: var(--bgc);
+  overflow-x: hidden;
+}
+.cursiveFont {
+  font-family: "Merriweather", "Roboto", -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif !important;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  transition: 0.5s;
+  cursor: pointer;
+  text-decoration: none;
+}
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.box {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0 2.5rem;
+}
+.orgBtn {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--org);
+  padding: 1rem 3rem;
+  outline: 0;
+  border: 1px solid var(--org);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.orgBtn:hover {
+  opacity: 0.85;
+}
+.disabledBtn {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--white);
+  background-color: var(--dark);
+  padding: 1rem 3rem;
+  outline: 0;
+  border: 1px solid var(--dark);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  cursor: not-allowed;
+}
+.transBtn {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--org);
+  background-color: transparent;
+  padding: 1rem 3rem;
+  outline: 0;
+  border: 1px solid var(--org);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+.transBtn:hover {
+  background-color: var(--lorg);
+}
+.landingInput {
+  width: 100%;
+  border: 1px solid lightgray;
+  padding: 1.25rem;
+  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  outline: 0;
+  transition: 0.5s;
+  color: var(--tl);
+}
+.landingInput::placeholder {
+  color: var(--dark);
+}
+.landingInput:focus {
+  border: 1px solid var(--org);
+}
+.activeHeaderLink {
+  color: var(--org) !important;
+  font-weight: 500 !important;
+}
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.checkbox input {
+  zoom: 1.25;
+  margin: 0 0.5rem 0 0;
+  cursor: pointer;
+}
+.checkbox label {
+  font-size: 1.5rem;
+  color: var(--td);
+  cursor: pointer;
+  margin: 0;
+}
+/* Step Boxes of createProfile */
+.stepBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stepBox span {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--org);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.stepBox span svg {
+  color: var(--bgc);
+  font-size: 2rem;
+}
+.stepBox span h5 {
+  font-size: 1.5rem;
+  color: var(--dark);
+  font-weight: 400;
+}
+.stepBox p {
+  font-size: 1.5rem;
+  color: var(--tl);
+  margin: 0 0 0 1rem;
+}
+.stepBox.pending span {
+  background-color: var(--light);
+}
+.stepBox.pending span .doneIcon,
+.stepBox.pending span .activeIcon {
+  display: none;
+}
+.stepBox.active span {
+  background-color: var(--org);
+}
+.stepBox.active span .activeIcon {
+  display: flex;
+}
+.stepBox.active span .doneIcon,
+.stepBox.active span h5 {
+  display: none;
+}
+.stepBox.done span {
+  background-color: var(--org);
+}
+.stepBox.done span .doneIcon {
+  display: flex;
+}
+.stepBox.done span .activeIcon,
+.stepBox.done span h5 {
+  display: none;
+}
+.contentBox2,
+.contentBox3,
+.contentBox4,
+.contentBox5 {
+  display: none;
+}
+.heroHeadingBox {
+  overflow: hidden;
+}
+.ciDown {
+  opacity: 0 !important;
+  z-index: 20 !important;
+}
+.ciUp {
+  opacity: 1 !important;
+  z-index: 25 !important;
+}
+.activeDMLink {
+  background-color: rgba(112, 128, 144, 0.35) !important;
+  color: rgba(221, 226, 255, 1) !important;
+  border-left: 5px solid rgba(221, 226, 255, 0.75) !important;
+}
+.rating-css div {
+  color: #ffad31;
+  text-align: center;
+}
+.rating-css input {
+  display: none;
+}
+.rating-css input + label .abcc {
+  font-size: 2.25rem;
+  margin: 0 0.15rem;
+  text-shadow: 1px 1px 0 #ffad31;
+  cursor: pointer;
+}
+.rating-css input:checked + label ~ label .abcc {
+  color: var(--dark);
+}
+.rating-css label:active {
+  transform: scale(0.8);
+  transition: 0.3s ease;
+}
+@media screen and (max-width: 1000px) {
+  .orgBtn {
+    padding: 1rem 2rem;
+    font-size: 1.35rem;
+  }
+  .transBtn {
+    padding: 1rem 2rem;
+    font-size: 1.35rem;
+  }
+
+  .box {
+    padding: 0 2.5rem;
+  }
+  .landingInput {
+    padding: 1rem;
+  }
+  .stepBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .stepBox span {
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
+  }
+  .stepBox p {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.75rem 0 0 0;
+  }
+  .stepBox span h6 {
+    font-size: 1.25rem;
+  }
+  .stepBox span svg {
+    font-size: 1.75rem;
+  }
+  .contentBox {
+    padding: 0 2.5rem;
+  }
+
+  .checkbox input {
+    zoom: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .box {
+    padding: 0 1.5rem;
+  }
+}
+.css-10hburv-MuiTypography-root {
+  font-size: 1.5rem;
+}
+.css-2m9kme-MuiFormControl-root {
+  margin: 0;
+  max-width: 100%;
+  min-width: 100%;
+  width: 100%;
+}
+.css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 0;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: 0;
+}
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+  font-size: 1.35rem;
+  color: var(--org);
+}
+@media (min-width: 600px) {
+  .css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root {
+    min-height: auto;
+    padding: 0.25rem 1rem;
+  }
+}
+.css-i4bv87-MuiSvgIcon-root {
+  width: 1.5em;
+  height: 1.5em;
+  fill: rgba(255, 109, 11, 0.85);
+  font-size: 1.5rem;
+}
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+  padding: 0.5rem;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: rgba(255, 109, 11, 0.15);
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root.Mui-disabled {
+  opacity: 1;
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--dark);
+  font-style: normal;
+  font-weight: 500;
+}

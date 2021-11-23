@@ -1,0 +1,303 @@
+.dashboardHeader {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.25rem;
+  margin: 0 0 2.5rem 0;
+}
+.dashboardHeader > img {
+  width: 13.5rem;
+  object-fit: contain;
+  height: 5rem;
+}
+.dhRight {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.dhHeading {
+  font-size: 2.25rem;
+  color: var(--tl);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.dhHeading svg {
+  display: none;
+  font-size: 2.35rem;
+  margin: 0 1.5rem 0 0;
+}
+.dhRight button {
+  position: relative;
+  margin: 0 0 0 2.5rem;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+.dhRight button > svg {
+  font-size: 2.5rem;
+  color: var(--dark);
+  transition: 0.5s;
+  cursor: pointer;
+}
+.dhRight button:hover > svg,
+.dhRight button:active > svg,
+.dhRight button:focus > svg {
+  color: var(--blue);
+}
+.dhRight button:focus-within > .notificationBox {
+  display: flex;
+}
+.notificationBox {
+  width: 35rem;
+  max-height: 45rem;
+  background-color: var(--white);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(0, calc(100% + 0.75rem));
+  z-index: 1000;
+  display: none;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.75rem;
+  overflow: hidden;
+}
+.notificationBox > * {
+  width: 100%;
+}
+.notificationHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 3rem 1.5rem 0;
+}
+.notificationHeader span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--dark);
+  transition: 0.5s;
+  font-weight: 500;
+}
+.notificationHeader span:nth-child(1) {
+  color: var(--org);
+}
+.notificationHeader span svg {
+  font-size: 2rem;
+  margin: 0 0.5rem 0 0;
+}
+.notiboxGridBox {
+  width: 100%;
+  padding: 1rem 0;
+  border-top: 1px solid lightgray;
+  transition: 0.5s;
+  display: flex;
+  align-items: flex-start;
+}
+.notiboxGrid {
+  width: 100%;
+  max-height: 35rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0 1.5rem 0 0;
+}
+.notiboxGrid::-webkit-scrollbar {
+  width: 0.75rem;
+}
+.notiboxGrid::-webkit-scrollbar-track {
+  border-radius: 1000px;
+}
+.notiboxGrid::-webkit-scrollbar-thumb {
+  border-radius: 1000px;
+  background-color: lightgray;
+}
+.notiboxGridBox img {
+  min-width: 5rem;
+  min-height: 5rem;
+  max-width: 5rem;
+  max-height: 5rem;
+  margin: 0 1rem 0 0;
+  border-radius: 50%;
+}
+.notiboxGridBox h2 {
+  font-size: 1.5rem;
+  color: var(--tl);
+  font-weight: 400;
+  text-align: left;
+}
+.notiboxGridBox h3 {
+  font-size: 1.5rem;
+  color: var(--tl);
+  font-weight: 700;
+  text-align: left;
+}
+.notiboxGridBox h2 span {
+  font-weight: 700;
+}
+.notiboxGridBox p {
+  font-size: 1.15rem;
+  color: var(--dark);
+  margin: 0.5rem 0 0 0;
+}
+.notiboxTextBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.notificationContentBox {
+  width: 100%;
+  display: block;
+}
+.inboxContentBox {
+  width: 100%;
+  display: none;
+}
+.notificaionIndicator {
+  width: 1rem;
+  height: 1rem;
+  background-color: royalblue;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-0.25rem, 0.25rem);
+  border: 1px solid var(--bgc);
+}
+.dhrDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--dark);
+  margin: 0 0 0 3.5rem;
+}
+.dhrDetails img {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  margin: 0 0 0 1.5rem;
+}
+.dhrDetails h6 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--tl);
+  margin: 0 0 0 3.5rem;
+}
+.dhMob {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  display: none;
+}
+.dhMobBox {
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue);
+  position: relative;
+  z-index: 200;
+}
+.dhmContentContainer {
+  width: 40%;
+  height: 100%;
+}
+.dhBackDrop {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+@media screen and (max-width: 1000px) {
+  .dhHeading svg {
+    display: flex;
+  }
+  .dashboardHeader > img {
+    width: 10rem;
+  }
+  .dashboardHeader {
+    padding: 1.5rem;
+    background-color: var(--blue);
+    height: 6.5rem;
+  }
+  .dashboardHeader {
+    margin: 0 0 2.5rem 0;
+  }
+  .dhRight button > svg {
+    color: var(--light);
+  }
+  .dhHeading {
+    font-size: 2rem;
+    color: var(--light);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+  }
+  .dhRight button {
+    position: relative;
+    margin: 0 0 0 1.5rem;
+  }
+  .dhrDetails {
+    margin: 0 0 0 1.5rem;
+    border-left: 0 solid var(--dark);
+  }
+  .dhrDetails h6 {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .dhHeading {
+    font-size: 1.65rem;
+  }
+
+  .dhrDetails h6 {
+    display: none;
+  }
+  .dhHeading svg {
+    font-size: 2;
+    margin: 0 0.75rem 0 0;
+  }
+  .dhRight button {
+    margin: 0 0 0 0.75rem;
+  }
+  .dhrDetails {
+    margin: 0;
+    border-left: 0 solid var(--dark);
+  }
+
+  .dashboardHeader {
+    margin: 0 0 1.75rem 0;
+  }
+  .dhmContentContainer {
+    width: 65%;
+  }
+
+  .notificationBox {
+    width: 95vw;
+    max-height: 75vh;
+    transform: translate(5.35rem, calc(100% + 2.5rem));
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.35);
+    padding: 1.5rem 0.75rem 1.5rem 1.5rem;
+  }
+  .notiboxGrid {
+    max-height: 60vh;
+    padding: 0 1.5rem 0 0;
+  }
+  .dhRight button:hover > svg,
+  .dhRight button:active > svg,
+  .dhRight button:focus > svg {
+    color: var(--org);
+  }
+}

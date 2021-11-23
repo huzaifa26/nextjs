@@ -1,0 +1,306 @@
+.topBanner {
+  width: 100%;
+  background-color: var(--lorg);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2.5rem 5rem;
+}
+.callCircles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5rem 0 0;
+  cursor: pointer;
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+}
+.callCircles > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+.circle1 {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  opacity: 0;
+}
+.circle2 {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  opacity: 0;
+}
+.circle3 {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  opacity: 0;
+}
+.circle4 {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  opacity: 0;
+}
+.circle5 {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  color: var(--org);
+}
+.circle5 svg {
+  font-size: 2.5rem;
+}
+.circle5 span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background-color: var(--org);
+  color: var(--bgc);
+  padding: 0.75rem 1.75rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: 0.5s;
+}
+.circle5 span::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 90%);
+  border-top: 0.75rem solid var(--org);
+  border-bottom: 0.75rem solid transparent;
+  border-left: 0.75rem solid transparent;
+  border-right: 0.75rem solid transparent;
+}
+.callCircles:hover .circle5 {
+  background-color: var(--org);
+  color: var(--bgc);
+}
+.callCircles:hover .circle5 span {
+  transform: translate(-50%, -125%);
+}
+.tbRight {
+  flex: 1 1;
+}
+.tbRight h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--tl);
+}
+.phoneField {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-radius: 1000px;
+  padding: 0.5rem;
+  height: 4.5rem;
+  margin: 2.5rem 0 0 0;
+}
+.phoneField input {
+  width: 75%;
+  height: 100%;
+  background-color: var(--white);
+  border: 0;
+  outline: 0;
+  padding: 0 1rem;
+  color: var(--tl);
+  font-size: 1.5rem;
+}
+.phoneField input::placeholder {
+  color: var(--dark);
+}
+.phoneField button {
+  background-color: var(--org);
+  border: 0;
+  outline: 0;
+  color: var(--bgc);
+  height: 100%;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1000px;
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+.aTeamP {
+  font-size: 2rem;
+  margin: 2.5rem 0;
+  font-weight: 700;
+  color: var(--tl);
+}
+.agentsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 2.5rem;
+}
+.agentsGridBox {
+  border: 1px solid lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.agentsGridBox div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.agentsGridBox div p {
+  font-size: 1.5rem;
+  background-color: var(--lorg);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.agentsGridBox img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  margin: 0 1.5rem 0 0;
+}
+.agentsGridBox h1 {
+  font-size: 2rem;
+  color: var(--tl);
+  font-weight: 700;
+}
+.agentsGridBox h2 {
+  font-size: 1.5rem;
+  color: var(--dark);
+  font-weight: 400;
+  margin: 0;
+}
+.agentsGridBox h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--tl);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+.agentsGridBox h3 svg {
+  font-size: 2rem;
+  margin: 0 0.5rem 0 0;
+  color: var(--org);
+}
+.agentsGridBox main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.mainContactsBox {
+  margin: 2.5rem 0 0 0;
+  font-size: 2rem;
+  color: var(--tl);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+.mainContactsBox svg {
+  margin: 0 0.5rem 0 0;
+  color: var(--org);
+  background-color: var(--lorg);
+  padding: 1rem;
+  margin: 0 1.5rem 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 1350px) {
+  .phoneField {
+    width: 85%;
+  }
+  .agentsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 2.5rem;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .phoneField {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .d8mainParent {
+    padding: 0 0 1.5rem 2.5rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  .topBanner {
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+  .callCircles {
+    margin: 0 0 5rem 0;
+  }
+
+  .mainContactsBox {
+    font-size: 1.75rem;
+  }
+  .mainContactsBox svg {
+    margin: 0 0.5rem 0 0;
+    color: var(--org);
+    background-color: var(--lorg);
+    padding: 1rem;
+    margin: 0 1.5rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+  }
+
+  .tbRight h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--tl);
+  }
+  .tbRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .agentsGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .agentsGridBox h1 {
+    font-size: 1.75rem;
+  }
+  .agentsGridBox h3 {
+    font-size: 1.5rem;
+  }
+  .aTeamP {
+    font-size: 1.5rem;
+  }
+}

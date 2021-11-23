@@ -1,0 +1,37 @@
+.seHeader {
+  font-size: 2.5rem;
+  color: var(--td);
+  font-weight: 700;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+.seHead {
+  background-color: var(--lorg);
+  padding: 0 0 2.5rem 0;
+}
+.se4Grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 0;
+  background-color: var(--bgc);
+  border-radius: 1rem;
+  padding: 1.5rem 0;
+}
+.se4GridBox {
+  width: 100%;
+  background-color: var(--bgc);
+  border-right: 1px solid lightgray;
+  padding: 0 1.5rem;
+  cursor: pointer;
+}
+.se4GridBox:last-child {
+  border: 0;
+}
+.se4GridBox > label {
+  font-size: 1.35rem;
+  color: var(--dark);
+  margin: 0 0 0.75rem 0;
+  display: flex;
+}

@@ -1,0 +1,158 @@
+.hero {
+  width: 100%;
+  background-color: var(--lorg);
+  padding: 10rem 0;
+}
+.heroContentBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+}
+.heroContentBox h1 {
+  font-size: 4rem;
+  color: var(--org);
+  font-weight: 700;
+}
+.heroContentBox p {
+  font-size: 1.5rem;
+  margin: 2.5rem 0;
+  color: var(--tl);
+  font-weight: 400;
+}
+.heroContentBox > div {
+  width: 50%;
+  padding: 0 5rem 0 0;
+}
+.heroContentBox > img {
+  width: 50%;
+  object-fit: contain;
+}
+.heroContentBox.heroContentBox2 > img {
+  padding: 0 5rem 0 0;
+}
+.heroContentBox2 {
+  margin: 10rem 0;
+}
+.explanationBox {
+  width: 100%;
+  padding: 10rem 7.5rem 20rem 7.5rem;
+  border-radius: 0 0 30rem 0;
+  background-color: #f4f5fa;
+  margin: 0 0 10rem 0;
+}
+.explanationBox h1 {
+  font-size: 4rem;
+  color: var(--org);
+  font-weight: 700;
+  text-align: center;
+}
+.explanationGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
+  margin: 5rem 0 0 0;
+}
+.explanationGrid img {
+  width: 100%;
+  height: 40rem;
+  object-fit: contain;
+  border-radius: 1rem;
+  max-width: 100%;
+}
+.explanationGrid div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.explanationGrid div p {
+  font-size: 1.75rem;
+  color: var(--tl);
+}
+.explanationGrid div span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  font-size: 1.75rem;
+  color: var(--white);
+  background-color: var(--org);
+  margin: 0 0 1.75rem 0;
+  border-radius: 50%;
+}
+@media screen and (max-width: 1000px) {
+  .hero {
+    padding: 5rem 0;
+  }
+  .heroContentBox > div {
+    padding: 0 2.5rem 0 0;
+  }
+  .heroContentBox h1 {
+    font-size: 2.75rem;
+  }
+  .heroContentBox p {
+    font-size: 1.5rem;
+  }
+  .explanationBox {
+    padding: 5rem 5rem 12.5rem 5rem;
+  }
+  .explanationBox h1 {
+    font-size: 2.75rem;
+  }
+  .explanationGrid img {
+    height: 22.5rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .heroContentBox {
+    flex-direction: column;
+  }
+  .heroContentBox > div {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .heroContentBox > img {
+    width: 100%;
+    margin: 5rem 0 0 0;
+  }
+  .heroContentBox2.heroContentBox {
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+  }
+  .heroContentBox.heroContentBox2 > img {
+    padding: 0;
+  }
+  .explanationGrid {
+    grid-template-columns: 1fr;
+  }
+  .explanationGrid img {
+    display: none;
+  }
+
+  .heroContentBox h1 {
+    font-size: 3rem;
+  }
+  .explanationBox {
+    padding: 2.5rem 2.5rem 10rem 2.5rem;
+    border-radius: 0 0 15rem 0;
+  }
+  .explanationBox h1 {
+    font-size: 2rem;
+  }
+  .hero {
+    padding: 2.5rem 0;
+  }
+  .heroContentBox > img {
+    margin: 2.5rem 0 0 0;
+  }
+}

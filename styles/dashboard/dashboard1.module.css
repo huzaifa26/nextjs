@@ -1,0 +1,243 @@
+.dashboard1BoxParent {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  justify-content: space-between;
+}
+.d1Left {
+  background-color: var(--white);
+  border: 2px solid var(--light);
+  border-radius: 0.5rem;
+  height: auto;
+  margin-right: 2.5rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.d1Left > * {
+  width: 100%;
+}
+.d1Right {
+  background-color: var(--white);
+  border: 2px solid var(--light);
+  border-radius: 0.5rem;
+  flex: 1 1;
+  height: auto;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2.5rem;
+}
+.d1Left h1 {
+  font-size: 2.25rem;
+  color: var(--td);
+  font-weight: 700;
+  text-align: center;
+  margin: 1.5rem 0 0.5rem 0;
+}
+.d1Left h3 {
+  font-size: 1.35rem;
+  color: var(--tl);
+  font-weight: 400;
+  text-align: center;
+}
+.d1Left img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+.separator {
+  width: 100%;
+  height: 1px;
+  background-color: var(--light);
+  margin: 1.5rem 0;
+}
+.d1Left > button {
+  width: 100%;
+  margin: 1rem 0 0 0;
+  white-space: nowrap;
+  min-width: 30rem;
+}
+.textDetailsBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+.textDetailsBox h2 {
+  font-size: 1.5rem;
+  color: var(--tl);
+  font-weight: 400;
+}
+.textDetailsBox span {
+  font-size: 1.5rem;
+  color: var(--td);
+  font-weight: 400;
+}
+.d1box {
+  width: 100%;
+  border: 2px solid var(--light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+  color: var(--td);
+  cursor: pointer;
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+}
+.d1box:hover {
+  color: var(--bgc);
+  background-color: var(--org);
+  border: 2px solid var(--org);
+}
+.d1box span {
+  width: 7.5rem;
+  height: 7.5rem;
+  background-color: var(--lorg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 1.5rem 0;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.d1box:hover > span {
+  background-color: var(--white);
+}
+.d1box img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+.d1box h4 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: center;
+}
+.d3Right {
+  background-color: var(--white);
+  border: 2px solid var(--light);
+  border-radius: 0.5rem;
+  flex: 1 1;
+  height: auto;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1.5rem;
+}
+.scheduledLessonsListBox {
+  width: 100%;
+  height: max-content;
+  padding: 1.5rem;
+  border: 2px solid var(--light);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.teacherDetails {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.teacherDetails img {
+  width: 4.75rem;
+  height: 4.75rem;
+  border-radius: 50%;
+  margin: 0 1em 0 0;
+}
+.teacherDetails h1 {
+  font-size: 2rem;
+  color: var(--td);
+  font-weight: 700;
+}
+.teacherDetails h2 {
+  font-size: 1.35rem;
+  color: var(--dark);
+  font-weight: 400;
+}
+.lessonTimings h2 {
+  font-size: 1.35rem;
+  color: var(--dark);
+  font-weight: 400;
+}
+@media screen and (max-width: 1250px) {
+  .d1Left > button {
+    min-width: unset;
+  }
+  .d1box img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  .d1box span {
+    width: 6rem;
+    height: 6rem;
+  }
+  .d1box h4 {
+    font-size: 1.5rem;
+  }
+
+  .teacherDetails {
+    width: 55%;
+  }
+  .lessonTimings {
+    width: 45%;
+  }
+  .scheduledLessonsListBox button {
+    margin: 1.5rem 0 0 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .scheduledLessonsListBox {
+    align-items: flex-end;
+  }
+  .teacherDetails {
+    width: 100%;
+  }
+  .lessonTimings {
+    width: 50%;
+    margin: 1.5rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .dashboard1BoxParent {
+    flex-direction: column;
+  }
+  .d1Left {
+    margin: 0 auto 1.5rem auto;
+    padding: 1.5rem;
+    width: 50%;
+  }
+  .d1Right {
+    padding: 1.5rem;
+    grid-gap: 1.5rem;
+  }
+  .d3Right {
+    padding: 1.5rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .d1Left {
+    width: 100%;
+    border: 1px solid var(--light);
+  }
+  .d1Right {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    border: 1px solid var(--light);
+  }
+  .d1box {
+    border: 1px solid var(--light);
+  }
+  .lessonTimings {
+    width: 100%;
+  }
+}
