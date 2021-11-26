@@ -8,7 +8,7 @@ import { fr } from '../locales/fr'
 
 import styles from '../styles/Home.module.css'
 
-function Home() {
+const Home = () => {
 
   const [id , setId] = useState();
   const [language, setLanguage] = useState('');
