@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.3.0",
     "@material-ui/core": "^4.12.3",
     "@mui/material": "^5.0.1",
+    "antd": "^4.17.2",
     "axios": "^0.24.0",
     "formik": "^2.2.9",
     "gsap": "^3.7.1",
@@ -27,6 +28,7 @@
     "react-tilt": "^0.1.4",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.0",
+    "styled-components": "^5.3.3",
     "swiper": "^6.7.0",
     "yup": "^0.32.11"
   },

@@ -11,7 +11,8 @@ const signupForm = () => {
   };
   //Submitted
   const handleSubmit = (value) => {
-    console.log(value);
+    debugger
+    console.log('value',value);
     console.log("submit");
   };
   return (

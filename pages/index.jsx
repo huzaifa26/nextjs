@@ -8,6 +8,8 @@ import { fr } from '../locales/fr'
 
 import styles from '../styles/Home.module.css'
 
+import Link from 'next/link'
+
 const Home = () => {
 
   const [id , setId] = useState();
@@ -37,14 +39,18 @@ const Home = () => {
     <div className={styles.container}>
       <h1>{t.title}</h1>
       <p>Enter id to get title:</p>
-      <input 
-        type="text" 
-        value={id} 
+      <input
+        type="text"
+        value={id}
         onChange={(e) => setId(e.target.value)}>
       </input>
       <button onClick={() => clickHandler()}>
         Submit
       </button>
+
+        <Link href={'/signup'}><button >
+            signup
+        </button></Link>
       <h1>Title: {title}</h1>
     </div>
   )
