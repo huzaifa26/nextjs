@@ -33,7 +33,7 @@ const InputStyle = styled.input`
 const signupScreen = ({formInitialSchema, handleSubmit}) => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [language, setLanguage] = useState('');
-
+console.log("MR testing")
   const t = language === 'en' ? en : fr;
     return (
         <div>
