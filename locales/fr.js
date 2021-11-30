@@ -7,5 +7,10 @@ export const fr= {
     email:'E-mail',
     password:'Mot de passe',
     remembarTitle:'Souviens-toi de moi',
-    tutorSigninTitle:'Connectez-vous en tant que tuteur'
+    tutorSigninTitle:'Connectez-vous en tant que tuteur',
+    alreadyAccountTitle:'\'Vous avez déjà un compte?',
+    loginTitle:'Connexion',
+    LoginHeader:'S\'identifier',
+    haveAccount:'Don\'t have an account?',
+    getStarted:'Commencer'
 };

@@ -1,7 +1,7 @@
 import * as yup from "yup";
 
 export const signUpValidateSchema = yup.object().shape({
-  userName: yup.string().email().required("UserName is required"),
+  email: yup.string().email("Invalid Email").required("UserName is required"),
   password: yup
     .string()
     .min(8, "min 8 charaters are required")
@@ -9,7 +9,7 @@ export const signUpValidateSchema = yup.object().shape({
 });
 
 export const loginValidateSchema = yup.object().shape({
-  userName: yup.string().email().required("UserName is required"),
+  email: yup.string().email("Invalid Email").required("UserName is required"),
   password: yup
     .string()
     .min(8, "min 8 charaters are required")

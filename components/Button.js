@@ -1,7 +1,7 @@
 import { Button as AntButton } from 'antd';
 import styled from 'styled-components'
 
-const BtnStyle = styled(AntButton)`
+const BtnStyle = styled.button`
   width: 100%;
   background-color: var(--org);
   color: white;

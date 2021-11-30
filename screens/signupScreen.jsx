@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import Head from 'next/head'
 import {
     SignupHead, SignupHeader, SignupBox, SignupImg, SignupBoxContant, SignupHeading, SignupHeadingSpan, SignupTitle,
-    SignupInputBox, SignupFormContainer, BtnContainer, RemenberMeBox, CheckBoxContainer, CheckBoxLabel, TutorSignin
+    SignupInputBox, SignupFormContainer, BtnContainer, RemenberMeBox, CheckBoxContainer, CheckBoxLabel, TutorSignin,
+    MyButon, AlreadyAccount,  AlreadyAccount_Ancher
 } from '../styles/signup.styled'
 import {Box} from '../styles/global.styled'
 import {en} from '../locales/en'
@@ -12,6 +13,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import Textfiled from "../components/Textfield";
 import CustomButton from "../components/Button";
 import styled from 'styled-components'
+import Link from 'next/link'
 
 const InputField = styled.div`
  width: 100%`
@@ -58,24 +60,8 @@ const signupScreen = ({formInitialSchema, handleSubmit}) => {
                             validationSchema={signUpValidateSchema}
                         >
                             <Form>
-                                {/*<Textfiled label={t.email} name={'email'} placeholder={"jane@acme.com"} />*/}
-                                {/*<Textfiled label={t.password} name={'password'} placeholder={"password"} type={"password"}/>*/}
-                                <InputField>
-                                    <InputStyle  label={t.email} name={'email'} placeholder={"jane@acme.com"} />
-                                    <ErrorMessage
-                                        component="div"
-                                        name="userName"
-                                        style={{ color: "red" }}
-                                    />
-                                </InputField>
-                                <InputField>
-                                    <InputStyle  label={t.password} name={'password'} placeholder={"password"} type={"password"} />
-                                    <ErrorMessage
-                                        component="div"
-                                        name="password"
-                                        style={{ color: "red" }}
-                                    />
-                                </InputField>
+                                <Textfiled label={t.email} name={'email'} placeholder={"jane@acme.com"} />
+                                <Textfiled label={t.password} name={'password'} placeholder={"password"} type={"password"}/>
                                 <RemenberMeBox>
                                     <CheckBoxContainer>
                                         <input type="checkbox" name="remember" id="remember" />
@@ -83,11 +69,18 @@ const signupScreen = ({formInitialSchema, handleSubmit}) => {
                                     </CheckBoxContainer>
                                     <TutorSignin>{t.tutorSigninTitle}</TutorSignin>
                                 </RemenberMeBox>
-
                                 <BtnContainer>
                                     <CustomButton title={t.signupTitle}/>
+                                    {/*<MyButon type={'submit'}>{t.signupTitle}</MyButon>*/}
+                                    {/*<button type={'submit'}>Register</button>*/}
                                 </BtnContainer>
 
+                                <AlreadyAccount>
+                                    {t.alreadyAccountTitle}{" "}
+                                    <Link href="/login">
+                                        <AlreadyAccount_Ancher>{t.loginTitle}</AlreadyAccount_Ancher>
+                                    </Link>
+                                </AlreadyAccount>
                             </Form>
                         </Formik>
                     </SignupInputBox>
