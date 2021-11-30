@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProfileDescriptionScreen from "../screens/profileDescriptionScreen";
 import { profileDescription } from "../redux/actions/auth";
 let initialValues = {
@@ -8,6 +8,8 @@ let initialValues = {
 };
 
 const ProfileDescription = () => {
+  const profile = useSelector((state) => state.profile);
+  console.log("profile", profile);
   const dispatch = useDispatch();
   const handleSubmit = (values) => {
     dispatch(profileDescription(values));

@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { about } from "../redux/actions/auth";
 import AboutTutorScreen from "../screens/aboutScreen";
 
@@ -17,6 +17,8 @@ let initialValues = {
 };
 
 const AboutTutor = () => {
+  const aboutt = useSelector((state) => state.about);
+  console.log("about", aboutt);
   const dispatch = useDispatch();
   const handleSubmit = (values) => {
     dispatch(about(values));

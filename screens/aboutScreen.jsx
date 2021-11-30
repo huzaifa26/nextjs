@@ -1,6 +1,6 @@
 import React from "react";
 import { Field, Form, Formik } from "formik";
-import { aboutValidationSchema } from "../utlis/about";
+import { aboutValidationSchema } from "../utlis/auth";
 import CustomButton from "../components/Button";
 import Textfield from "../components/Textfield";
 

@@ -1,1 +1,5 @@
-export const SET_TITLE = "SET_TITLE"
+export const TYPES = {
+  SET_TITLE: "SET_TITLE",
+  SET_ABOUT: "SET_ABOUT",
+  SET_PROFILE: "SET_PROFILE",
+};
