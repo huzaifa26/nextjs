@@ -20,13 +20,12 @@ let initialValues = {
 const AboutTutor = () => {
   const aboutt = useSelector((state) => state.about);
   //states
-  const [values, setValues] = useState({});
+  const [, setValues] = useState({});
   const router = useRouter();
   useEffect(() => {
     initialValues = aboutt;
     setValues((prev) => ({ ...prev, ...initialValues }));
   }, []);
-  console.log("about", aboutt);
   const dispatch = useDispatch();
   const handleSubmit = (values) => {
     dispatch(about({ data: values, router }));

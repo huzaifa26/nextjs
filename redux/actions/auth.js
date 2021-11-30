@@ -1,5 +1,20 @@
-import { userAbout, userRegister } from "../../pages/api/auth";
+import { userAbout, userLogin, userRegister } from "../../pages/api/auth";
 import { TYPES } from "../types";
+
+export const login = (data) => async (dispatch) => {
+  console.log("data", data);
+  try {
+    const response = await userLogin(data);
+    console.log(response);
+  } catch (error) {
+    console.log(error.response);
+  }
+  dispatch({
+    type: TYPES.SET_LOGIN,
+    payload: data.data,
+  });
+  data.router.push("/about");
+};
 
 export const signUp = (data) => async (dispatch) => {
   console.log("data", data);

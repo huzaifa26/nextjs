@@ -2,4 +2,5 @@ export const TYPES = {
   SET_TITLE: "SET_TITLE",
   SET_ABOUT: "SET_ABOUT",
   SET_PROFILE: "SET_PROFILE",
+  SET_LOGIN: "SET_LOGIN",
 };

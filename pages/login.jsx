@@ -1,30 +1,21 @@
 import React from "react";
 import { LoginScreen } from "../screens";
-import Axios from "axios";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { login } from "../redux/actions/auth";
 
-const login = () => {
+const Login = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const router = useRouter();
+  const dispatch = useDispatch();
   const formInitialSchema = {
     userName: "",
     passowrd: "",
   };
   //Submitted
   const handleSubmit = (value) => {
-
-    const url = 'https://aeaf-39-46-16-1.ngrok.io/api/auth/tutor/login'
-    console.log('email',value.email);
-    console.log('password',value.password);
-    const data={"email":value.email, 'password': value.password};
-    try{
-      debugger
-      Axios.post(url, data)
-      console.log("login successfully")
-      router.push('/commingsoon')
-    }catch (e) {
-      console.log(e)
-    }
+    const data = { email: value.email, password: value.password };
+    dispatch(login({ ...data, router }));
   };
   return (
     <LoginScreen
@@ -34,4 +25,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

@@ -12,6 +12,7 @@ const ProfileDescriptionScreen = ({ initialValues, handleSubmit }) => {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={profileDescriptionValidationSchema}
+      enableReinitialize
     >
       {() => (
         <Form>
