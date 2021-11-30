@@ -3,8 +3,10 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import Textfield from "../components/Textfield";
 import CustomButton from "../components/Button";
 import { profileDescriptionValidationSchema } from "../utlis/auth";
+import { useRouter } from "next/dist/client/router";
 
 const ProfileDescriptionScreen = ({ initialValues, handleSubmit }) => {
+  const router = useRouter();
   return (
     <Formik
       initialValues={initialValues}
@@ -21,6 +23,7 @@ const ProfileDescriptionScreen = ({ initialValues, handleSubmit }) => {
             style={{ color: "red" }}
           />
           <CustomButton title="Next" />
+          <button onClick={() => router.push("/about")}>Back</button>
         </Form>
       )}
     </Formik>

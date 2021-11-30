@@ -10,6 +10,7 @@ const AboutTutorScreen = ({ initialValues, handleSubmit }) => {
       initialValues={initialValues}
       onSubmit={handleSubmit}
       validationSchema={aboutValidationSchema}
+      enableReinitialize
     >
       {() => (
         <Form>

@@ -23,8 +23,9 @@ export const about = (data) => async (dispatch) => {
   }
   dispatch({
     type: TYPES.SET_ABOUT,
-    payload: data,
+    payload: data.data,
   });
+  data.router.push("/profileDescription");
 };
 export const profileDescription = (data) => async (dispatch) => {
   try {

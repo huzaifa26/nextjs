@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useRouter } from "next/dist/client/router";
 import { useDispatch, useSelector } from "react-redux";
 import { about } from "../redux/actions/auth";
 import AboutTutorScreen from "../screens/aboutScreen";
@@ -18,10 +19,17 @@ let initialValues = {
 
 const AboutTutor = () => {
   const aboutt = useSelector((state) => state.about);
+  //states
+  const [values, setValues] = useState({});
+  const router = useRouter();
+  useEffect(() => {
+    initialValues = aboutt;
+    setValues((prev) => ({ ...prev, ...initialValues }));
+  }, []);
   console.log("about", aboutt);
   const dispatch = useDispatch();
   const handleSubmit = (values) => {
-    dispatch(about(values));
+    dispatch(about({ data: values, router }));
   };
   return (
     <AboutTutorScreen
