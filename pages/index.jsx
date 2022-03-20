@@ -6,7 +6,7 @@ import { getTodoData } from './api/MockApi'
 import { en } from '../locales/en'
 import { fr } from '../locales/fr'
 
-import styles from '../styles/Home.module.css'
+import styles from '../styles/home.module.css'
 
 import Link from 'next/link'
 
