@@ -6,24 +6,24 @@ import { useDispatch } from "react-redux";
 import { signUp } from "../redux/actions/auth";
 
 const signupForm = () => {
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const router = useRouter();
+  // const router = useRouter();
 
-  const formInitialSchema = {
-    userName: "",
-    passowrd: "",
-  };
+  // const formInitialSchema = {
+  //   userName: "",
+  //   passowrd: "",
+  // };
 
   //Submitted
-  const handleSubmit = (value) => {
-    const data = { email: value.email, password: value.password };
-    dispatch(signUp(data));
-  };
+  // const handleSubmit = (value) => {
+  //   const data = { email: value.email, password: value.password };
+  //   dispatch(signUp(data));
+  // };
   return (
     <SignupScreen
-      formInitialSchema={formInitialSchema}
-      handleSubmit={handleSubmit}
+      // formInitialSchema={formInitialSchema}
+      // handleSubmit={handleSubmit}
     />
   );
 };

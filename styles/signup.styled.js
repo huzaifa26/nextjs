@@ -147,6 +147,3 @@ export const FormikErrorMessageStyle= styled(ErrorMessage)`
   font-size: 10px;
   color: red;
 `
-
-
-

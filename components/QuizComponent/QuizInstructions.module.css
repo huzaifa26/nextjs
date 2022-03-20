@@ -1,0 +1,61 @@
+.QuizInstructions{
+    height: 1000px;
+    width: 1840px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    position: absolute;
+    top: 1%;
+    left: 1.5%;
+    z-index: 999999;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headingDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.QuizInstructions div h1{
+    margin-top: 39px;
+    color: #023047;
+    font-size: 40px;
+    line-height: 54px;
+}
+
+.QuizInstructions p{
+    font-size: 28px;
+    line-height: 37px;
+    color: #023047;
+    width: 1357px;
+}
+
+.QuizInstructions button{
+    width: 150px;
+    height: 50px;
+    background-color: #D5D5D5;
+    border-radius: 25px;
+    color: #2B3044;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 50px;
+    border: 0;
+    outline: none;
+}
+
+.QuizInstructions img{
+    margin-top: 40px;
+    margin-right: 16px;
+}
+
+.QuizInstructions .crossImage{
+    position: absolute;
+    left: 95%;
+    top: 2%;
+    cursor: pointer;
+}
+

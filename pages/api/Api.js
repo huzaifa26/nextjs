@@ -1,6 +1,5 @@
 import axios from "axios";
 
-
 export default function Api(endpoint, auth = true) {
 	const instance = axios.create({
 		baseURL: endpoint,

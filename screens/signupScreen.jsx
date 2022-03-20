@@ -78,12 +78,12 @@ const signupScreen = ({ formInitialSchema, handleSubmit }) => {
                 validationSchema={signUpValidateSchema}
               >
                 <Form>
-                  <Textfield
+                  <Textfiled
                     label={t.email}
                     name={"email"}
                     placeholder={"jane@acme.com"}
                   />
-                  <Textfield
+                  <Textfiled
                     label={t.password}
                     name={"password"}
                     placeholder={"password"}

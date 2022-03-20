@@ -25,7 +25,7 @@ const AboutTutor = () => {
   useEffect(() => {
     initialValues = aboutt;
     setValues((prev) => ({ ...prev, ...initialValues }));
-  }, []);
+  }, [aboutt]);
   const dispatch = useDispatch();
   const handleSubmit = (values) => {
     dispatch(about({ data: values, router }));

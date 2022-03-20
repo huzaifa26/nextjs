@@ -13,7 +13,7 @@ export const login = (data) => async (dispatch) => {
     type: TYPES.SET_LOGIN,
     payload: data.data,
   });
-  data.router.push("/about");
+  data.router.push("/TeacherQuiz");
 };
 
 export const signUp = (data) => async (dispatch) => {

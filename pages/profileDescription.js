@@ -19,7 +19,7 @@ const ProfileDescription = () => {
   useEffect(() => {
     initialValues = profile;
     setValues((prev) => ({ ...prev, ...initialValues }));
-  }, []);
+  }, [profile]);
 
   const handleSubmit = (values) => {
     dispatch(profileDescription(values));

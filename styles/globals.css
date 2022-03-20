@@ -28,7 +28,7 @@
 }
 html,
 body {
-  width: 100%;
+  width: 1920px;
   background-color: var(--bgc);
   overflow-x: hidden;
 }
@@ -349,3 +349,4 @@ img {
   font-style: normal;
   font-weight: 500;
 }
+

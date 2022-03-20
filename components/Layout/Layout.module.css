@@ -1,0 +1,85 @@
+.navbar{
+    background-color: #ECECEC;
+    height:80px;
+    width:100vw;
+    max-width: 100%;
+    box-shadow: 1px 1px 8px #9B392F;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 999999;
+}
+
+.logoDiv{
+    width: 280px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoDiv img:first-child{
+    margin-left: 20px;
+}
+
+.searchDiv{
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.seachInput{
+    width: 220px;
+    height: 40px;
+    border-radius: 50px;
+    border: 0;
+    outline: none;
+    font-size: 20px;
+    font-family: Roboto;
+    text-indent: 20px;
+    color: #FE6903;
+}
+.seachInput::placeholder {
+    color: #FE6903;
+  }
+
+.seacrhImage{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    left: -50px;
+}
+
+.notification{
+    width: 280px;
+    height: 50px;
+    background-color: white;
+    margin-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profilePic{
+    margin-right: 25px;
+    width: 40px;
+    height: 40px;
+}
+
+.bellIcon{
+    margin-left: 25px;
+    width: 30px;
+    height: 35px;
+}
+
+.sb{
+    display: flex;
+    width: 100%;
+    background-color: #ECECEC;
+}
+
+.main{
+    width: 100%;
+}
