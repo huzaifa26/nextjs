@@ -1,6 +1,6 @@
 .QuizInstructions{
-    height: 1000px;
-    width: 1840px;
+    height: clamp(640px,96vh, 1060px);
+    width: clamp(1100px,96vw,1850px);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     position: absolute;
@@ -23,15 +23,15 @@
 .QuizInstructions div h1{
     margin-top: 39px;
     color: #023047;
-    font-size: 40px;
+    font-size: clamp(28px,2.08vw,40px);
     line-height: 54px;
 }
 
 .QuizInstructions p{
-    font-size: 28px;
+    font-size: clamp(20px,1.458vw,28px);
     line-height: 37px;
     color: #023047;
-    width: 1357px;
+    width: 70.677vw;
 }
 
 .QuizInstructions button{
@@ -40,7 +40,7 @@
     background-color: #D5D5D5;
     border-radius: 25px;
     color: #2B3044;
-    font-size: 24px;
+    font-size: clamp(18px,1.0416vw,24px);
     line-height: 32px;
     margin-bottom: 50px;
     border: 0;
@@ -58,4 +58,3 @@
     top: 2%;
     cursor: pointer;
 }
-

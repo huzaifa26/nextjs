@@ -28,7 +28,8 @@
 }
 html,
 body {
-  width: 1920px;
+  max-width: 1920px;
+  width: 100vw;
   background-color: var(--bgc);
   overflow-x: hidden;
 }

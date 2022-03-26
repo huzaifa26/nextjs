@@ -24,6 +24,76 @@ function QuizActivity(props) {
             total_addended:"Total Attended",
             result_in_per:'Results in %',
             status:'Upcomming'
+        },{
+            title:'Quiz title',
+            cg:'Class/Grade',
+            Course:'Course',
+            startTime_Data:'Start Date & Time',
+            endTime_date:'End Date & Time',
+            total_student:'Total Students',
+            total_addended:"Total Attended",
+            result_in_per:'Results in %',
+            status:'Upcomming'
+        },{
+            title:'Quiz title',
+            cg:'Class/Grade',
+            Course:'Course',
+            startTime_Data:'Start Date & Time',
+            endTime_date:'End Date & Time',
+            total_student:'Total Students',
+            total_addended:"Total Attended",
+            result_in_per:'Results in %',
+            status:'Upcomming'
+        },{
+            title:'Quiz title',
+            cg:'Class/Grade',
+            Course:'Course',
+            startTime_Data:'Start Date & Time',
+            endTime_date:'End Date & Time',
+            total_student:'Total Students',
+            total_addended:"Total Attended",
+            result_in_per:'Results in %',
+            status:'Upcomming'
+        },{
+            title:'Quiz title',
+            cg:'Class/Grade',
+            Course:'Course',
+            startTime_Data:'Start Date & Time',
+            endTime_date:'End Date & Time',
+            total_student:'Total Students',
+            total_addended:"Total Attended",
+            result_in_per:'Results in %',
+            status:'Upcomming'
+        },{
+            title:'Quiz title',
+            cg:'Class/Grade',
+            Course:'Course',
+            startTime_Data:'Start Date & Time',
+            endTime_date:'End Date & Time',
+            total_student:'Total Students',
+            total_addended:"Total Attended",
+            result_in_per:'Results in %',
+            status:'Upcomming'
+        },{
+            title:'Quiz title',
+            cg:'Class/Grade',
+            Course:'Course',
+            startTime_Data:'Start Date & Time',
+            endTime_date:'End Date & Time',
+            total_student:'Total Students',
+            total_addended:"Total Attended",
+            result_in_per:'Results in %',
+            status:'Upcomming'
+        },{
+            title:'Quiz title',
+            cg:'Class/Grade',
+            Course:'Course',
+            startTime_Data:'Start Date & Time',
+            endTime_date:'End Date & Time',
+            total_student:'Total Students',
+            total_addended:"Total Attended",
+            result_in_per:'Results in %',
+            status:'Upcomming'
         },
     ]
 

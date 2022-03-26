@@ -1,6 +1,6 @@
 .Questions{
-    height: 1000px;
-    width: 1840px;
+    height: clamp(640px,96vh, 1060px);
+    width: clamp(1100px,96vw,1850px);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     position: absolute;
@@ -23,26 +23,26 @@
 .Questions div h1{
     margin-top: 39px;
     color: #023047;
-    font-size: 40px;
+    font-size: clamp(28px,2.08vw,40px);
     line-height: 54px;
 }
 
 .Questions p{
-    font-size: 28px;
+    font-size: clamp(16px,1.458vw,28px);
     line-height: 37px;
     color: #023047;
-    width: 1357px;
+    width: 70.677vw;
 }
 
 .Questions button{
-    width: 150px;
-    height: 50px;
+    font-size: clamp(18px,1.0416vw,24px);
+    width: 7.81vw;
+    height: 4.629vh;
     background-color: #D5D5D5;
     border-radius: 25px;
     color: #2B3044;
-    font-size: 24px;
     line-height: 32px;
-    margin-bottom: 50px;
+    margin-bottom: 4.629vh;
     border: 0;
     outline: none;
 }
@@ -57,6 +57,10 @@
     left: 95%;
     top: 2%;
     cursor: pointer;
+}
+
+.buttondiv{
+    display: flex;
 }
 
 .buttondiv button{
@@ -92,8 +96,8 @@
 
 .questionArea div h2{
     margin: 15px 0px;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: clamp(16px,1.0416vw,24px);
+    line-height: 2.962vh;
     margin-left: 60px;
 }
 
@@ -103,9 +107,13 @@
     margin: 15px 0px;
 }
 
+.correctOptionDiv{
+    width: 31.25vw;
+}
+
 .correctOption{
-    width: 600px;
-    height: 60px;
+    width: 31.25vw;
+    height: 5.5555vh;
     background-color: #2B3044;
     border-radius: 10px;
     display: flex;
@@ -116,10 +124,11 @@
     width: 280px;
     height: 40px;
     color: white;
-    font-size: 24px;
+    font-size: clamp(16px,1.0416vw,24px);
     border-right: 3px solid white;
-    padding-top: 6px;
     padding-left: 20px;
+    display: flex;
+    align-items: center;
 
 }
 
@@ -127,26 +136,30 @@
     margin: 0 10px;
     display: flex;
     justify-content: space-between;
-    width: 300px;
+    width: 15.625vw;
 }
 
 .options label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 2px;
     background-color: white;
-    font-size: 24px;
-    height: 32px;
+    font-size: clamp(18px,1.0416vw,24px);
+    height: 2.962vh;
     border-radius: 5px;
     padding: 2px 10px;
     color: #2B3044;
     font-weight: bold;
+    margin: 0 0.104vw;
 }
 
 .options label input{
-    width: 20px;
-    height: 20px;
+    width: 1.0416vw;
+    height: 1.851vh;
 }
 
 .p{
     width: 600px !important;
-    font-size: 20px !important;
+    font-size: clamp(18px,1.0416vw,24px) !important;
 }

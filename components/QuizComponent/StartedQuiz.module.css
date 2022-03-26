@@ -1,27 +1,27 @@
 .startedQuiz{
     margin-top: 20px;
     background-color: #FFFFFF;
+    max-width: 100%;
     width: 100vw;
     height: 782px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    max-width: 1600px;
     /* max-height: 782px; */
     overflow-y: scroll;
     overflow-x: hidden;
 }
 
-.heading{
+.startedQuiz .heading{
+    max-width: 100%;
     width: 100vw;
     height: 121px;
     display: flex;
     justify-content: space-between;
-    max-width: 1600px;
 }
 
 .heading div h2{
-    font-size: 30px;
+    font-size: 1.6vw;
     font-weight: bold;
     line-height: 40px;
     color: #FE6903;
@@ -29,7 +29,7 @@
 }
 
 .heading div p{
-    font-size: 24px;
+    font-size: 1.3vw;
     font-weight: 400;
     line-height: 32px;
     color: #009444;
@@ -47,15 +47,14 @@
     margin: 44px 40px 0 0;
     background-repeat: no-repeat;
     outline: none;
-    text-align: left;
-    padding-left: 16px;
+    text-indent: -32px;
     background-position: 60px;
     background-color: #FFFFFF;
 }
 
 .thead{
     padding: 0 48px 0 37px;
-    font-size: 20px;
+    font-size: 1.05vw;
     font-weight: bold;
     color: #FFFFFF;
     min-height: 80px;
@@ -63,11 +62,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 85%;
+    width: 100vw;
 }
 
 .tbody{
     padding: 0 23px 0 20px ;
-    font-size: 20px;
+    font-size: 1.05vw;
     font-weight: medium;
     color: #2B3044;
     height: 80px;
@@ -77,7 +78,7 @@
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 0px 10px 20px;
-    max-width: 1560px;
+    max-width: 81%;
     min-height: 60px;
     border-radius: 15px;
 
@@ -88,15 +89,15 @@
 }
 
 .tbody td{
-    width: 230px;
+    width: 19%;
     text-align: center;
 }
 
 .tbody td button{
-    width: 100px;
+    width: 50%;
     height: 40px;
     border-radius: 20px;
     border: 1px solid #023047;
     background-color: #FFFFFF;
-    margin-left: -60px;
+    margin-left: 37%;
 }

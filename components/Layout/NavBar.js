@@ -12,7 +12,6 @@ function NavBar(props){
                 <img alt="" className={styles.seacrhImage} src="./Icon awesome-search.png"/>
                 <div className={styles.notification}>
                     <img alt="" className={styles.bellIcon} src="./Group 206.png"/>
-
                     <img alt="" className={styles.profilePic} src='Repeat Grid 1.png'/>
                 </div>
             </div>

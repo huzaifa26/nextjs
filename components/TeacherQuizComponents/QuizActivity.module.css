@@ -1,26 +1,26 @@
 .quizActivity{
         margin-top: 20px;
         background-color: #FFFFFF;
+        max-width: 100%;
         width: 100vw;
-        height: 782px;
+        max-height: 782px;
+        height: 100%;
         display: flex;
         flex-direction: column;
         border-radius: 10px;
-        max-width: 1600px;
-        overflow-y: scroll;
         overflow-x: hidden;
 }
 
 .heading{
+    max-width: 100%;
     width: 100vw;
     height: 121px;
     display: flex;
     justify-content: space-between;
-    max-width: 1600px;
 }
 
 .heading div h2{
-    font-size: 30px;
+    font-size: clamp(20px,1.6vw,30px);
     font-weight: bold;
     line-height: 40px;
     color: #FE6903;
@@ -28,7 +28,7 @@
 }
 
 .heading div p{
-    font-size: 24px;
+    font-size: clamp(16px,1.3vw,24px);
     font-weight: 400;
     line-height: 32px;
     color: #009444;
@@ -51,8 +51,9 @@
 }
 
 .activity{
-    width: 1540px;
-    height: 80px;
+    max-width: 97.4%;
+    width: 80.208vw;
+    min-height: 80px;
     border-radius: 10px;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
     margin: 10px 20px;
@@ -64,15 +65,17 @@
 }
 
 .activity p{
-    font-size: 20px;
+    margin: 0 0.5vw;
+    font-size: clamp(16px,1.05vw,20px);
     line-height: 27px;
+    /* width: clamp(100px,20vw,20vw); */
 }
 
 .activity button{
-    width: 150px;
+    width: 7.812vw;
     height: 40px;
     border-radius: 20px;
-    font-size: 20px;
+    font-size: clamp(12px,1.05vw,20px);
     border: 1px solid #707070;
     background-color: #FFFFFF;
 }

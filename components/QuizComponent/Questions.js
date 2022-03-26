@@ -22,7 +22,7 @@ function Questions(props) {
                 <div> <h2>D</h2> <h2>George Washington</h2> </div>
             </div>
 
-            <div>
+            <div className={styles.correctOptionDiv}>
                 <div className={styles.correctOption}>
                     <h2>Select Correct Answer</h2>
                     <div className={styles.options}>

@@ -4,11 +4,13 @@
     border-radius: 0 10px 10px 0;
     margin-top: 20px;
     box-shadow: 0px 0px 2px #000000;
-    width: 280px;
+    max-width: 14.90%;
+    width: 100%;
 }
 
 .sbNav{
-    width: 280px;
+    max-width: 14.6vw;
+    width: 100vw;
     height: 544.5px;
     border-bottom: 1px solid #707070;
     display: flex;
@@ -16,12 +18,11 @@
     align-items: center;
 }
 
-
-
 .sbNav .inactive a{
     border-radius: 10px;
     height: 40px;
-    width: 240px;
+    max-width: 12.5vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     margin: 10px 0;
@@ -31,7 +32,8 @@
     background-image: linear-gradient(to right, #34302B , #BEB9B0);
     border-radius: 10px;
     height: 40px;
-    width: 240px;
+    max-width: 12.5vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     margin: 10px 0;
@@ -48,12 +50,13 @@
 .sbNav div h1{
     margin-left: 20px;
     align-self: center;
-    font-size: 20px;
+    font-size: 1.05vw;
     font-weight: 400;
 }
 
 .sbNav2{
-    width: 100%;
+    max-width: 14.6vw;
+    width: 100vw;
     height: 388.5px;
     display: flex;
     flex-direction:column;
@@ -64,15 +67,16 @@
 .sbNav2 div h1{
     margin-left: 20px;
     align-self: center;
-    font-size: 20px;
+    font-size: 1.05vw;
     font-weight: 400;
 }
 
 .sbNav2 div{
     border-radius: 10px;
     height: 60px;
-    width: 240px;
+    max-width: 12.5vw;
+    width: 100vw;
     display: flex;
     align-items: center;
     margin: 10px 0;
-}
+}   
