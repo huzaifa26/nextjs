@@ -54,7 +54,7 @@
 
 .thead{
     padding: 0 48px 0 37px;
-    font-size: 1.05vw;
+    font-size: clamp(16px,1.0416vw,20px);
     font-weight: bold;
     color: #FFFFFF;
     min-height: 80px;
@@ -68,7 +68,7 @@
 
 .tbody{
     padding: 0 23px 0 20px ;
-    font-size: 1.05vw;
+    font-size: clamp(16px,1.0416vw,20px);
     font-weight: medium;
     color: #2B3044;
     height: 80px;
@@ -94,10 +94,11 @@
 }
 
 .tbody td button{
-    width: 50%;
+    width: 60%;
     height: 40px;
     border-radius: 20px;
     border: 1px solid #023047;
     background-color: #FFFFFF;
     margin-left: 37%;
+    font-size: clamp(16px,1.0416vw,20px);
 }

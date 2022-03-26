@@ -52,17 +52,24 @@
 }
 
 .thead{
-    padding: 0 48px 0 37px;
-    font-size: 1.05vw;
     font-weight: bold;
     color: #FFFFFF;
     min-height: 80px;
     background-color: #5A6268;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 85%;
     width: 100vw;
+}
+
+.thead tr{
+    font-size: clamp(16px,1.05vw,20px);
+    max-width: 95%;
+    width: 100vw;
+    margin-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .tbody{
@@ -82,8 +89,8 @@
     border-radius: 15px;
 }
 
-.thead th{
-    width: 19%;
+.thead tr th{
+    width: 10%;
 }
 
 .tbody td{

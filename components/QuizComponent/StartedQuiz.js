@@ -11,7 +11,7 @@ function StartedQuiz() {
             "c_g":'Class/Grade',
             "c":"Course",
             "t_n":'Tutors Name',
-            'ques':"10",
+            'ques':"10/15",
             'ed_t':'21-10-2021 | 10:00 PM'
         },
     ]
@@ -45,8 +45,8 @@ function StartedQuiz() {
     <div className={styles.startedQuiz}>
         <div className={styles.heading}>
             <div>
-                <h2>Upcomming Quizzes</h2>
-                <p>All Published & Scheduled Quizzes List</p>
+                <h2>Started Quizzes</h2>
+                <p>All the Quizzes you need to complete</p>
             </div>
             <div>
                 <button style={{backgroundImage:`url(filtericon.png)`}}>Filters</button>
@@ -56,9 +56,10 @@ function StartedQuiz() {
         <table>
                 <tr className={styles.thead}>
                     <th>Quiz Title</th>
-                    <th>Class/Grade</th>
+                    {/* <th>Class/Grade</th> */}
                     <th>Course</th>
                     <th>Tutor's Name</th>
+                    <th>Questions Attempted</th>
                     <th>End Data & Time</th>
                     <th>Actions</th>
                 </tr>
@@ -67,11 +68,13 @@ function StartedQuiz() {
                     return(
                         <tr key={''} className={styles.tbody}>
                             <td>{c.qt}</td>
-                            <td>{c.c_g}</td>
+                            {/* <td>{c.c_g}</td> */}
                             <td>{c.c}</td>
                             <td>{c.t_n}</td>
+                            <td>{c.ques}</td>
                             <td>{c.ed_t}</td>
-                            <td><button onClick={showInstructionsHandler} button><img alt="" src='./actionIcon.png'/></button></td>
+                            {/* <td><button onClick={showInstructionsHandler} button><img alt="" src='./actionIcon.png'/></button></td> */}
+                            <td><button onClick={showInstructionsHandler} button>Resume Quiz</button></td>
                         </tr>
                     )
                 })}
