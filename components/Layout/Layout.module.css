@@ -86,3 +86,14 @@
     width: 100vw;
     flex-shrink: 10;
 }
+
+@media screen and (max-width: 480px) {
+    .searchDiv {
+      background-color: lightgreen;
+      display: none;
+    }
+
+    .logoDiv{
+        max-width: 93%;
+    }
+  }

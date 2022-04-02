@@ -1,14 +1,13 @@
 .upcomming{
     margin-top: 20px;
-    background-color: #FFFFFF;
     max-width: 100%;
     width: 100vw;
-    height: 782px;
+    max-height: 782px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-y: auto; 
+    overflow-x: auto; 
 }
 
 .heading{
@@ -24,7 +23,7 @@
     font-weight: bold;
     line-height: 40px;
     color: #2B3044;
-    padding:19px 0 0 20px
+    padding:19px 0 0 20px;
 }
 
 .heading div p{
@@ -51,8 +50,9 @@
 }
 
 .upcomming table{
-    max-width: 1600px !important;
-    width: 100vw;
+    width: clamp(820px,85vw,1600px);
+    max-height: 52px !important;
+    overflow: hidden;
 }
 
 .thead{
@@ -65,8 +65,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 85%;
-    width: 100vw;
+    /* max-width: 85%; */
+    overflow-x: scroll;    
+    width: clamp(820px,85vw,1600px);
+    margin: 0;
 }
 
 .tbody{
@@ -81,13 +83,14 @@
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 0px 10px 20px;
-    max-width: 81%;
+    /* max-width: 81%; */
+    width: clamp(820px,81vw,1560px);
     min-height: 60px;
     border-radius: 15px;
 }
 
 .thead th{
-    width: 240px;
+    width: 25%;
 }
 
 .tbody td{
@@ -95,3 +98,26 @@
     text-align: center;
 }
 
+
+
+@media screen and (max-width:480px) {
+    .upcomming{
+        max-width: 108%;
+        width: 100vw;
+    }
+
+    .tbody{
+        margin: 10px 0px 10px 0px;
+        padding: 0;
+
+    }
+
+    .thead{
+        padding: 0;
+    }
+
+    .tbody td,.thead th{
+        /* width: 500px !important; */
+         margin:0 3px;
+    }
+}

@@ -18,28 +18,11 @@
 
 .buttonDiv{
     display: flex;
-    max-width: 98%;
-    width: 100vw;
-}
-
-.buttonActive{
-    color: #FFFFFF;
-    background-color: #A2B5FF;
-    font-size: clamp(20px,1.0416vw,1.0416vw);
-    font-family: Roboto;
-    border-radius: 30px;
-    border: 0;
-    box-shadow: 0px 0px 6px #000000;
-    /* max-width: 12.802vw; */
-    width: 100vw;
-    height: 60px;
-    margin-right: 60px;
-    margin-top: 20px;
-    display: flex;
+    width: clamp(20px,100vw,1600px);
 }
 
 .quiz .buttonInactive{
-    font-size: clamp(16px,1.0416vw,20px);
+    font-size: clamp(16px,1.0416vw,1.0416vw);
     font-family: Roboto;
     border-radius: 30px;
     border: 0;
@@ -47,7 +30,7 @@
     width: clamp(200px,13.802vw,265px);
     /* width: 100vw; */
     height: 60px;
-    margin-right: 55px;
+    margin-right: 3.125vw;
     margin-top: 20px;
     color: #2B3044;
 }
@@ -69,17 +52,24 @@
     color: #FF6D0C;
 }
 
-.quiz .buttonActive{
+.buttonActive{
     color: #FFFFFF;
     background-color: #A2B5FF;
-    font-size: clamp(16px,1.0416vw,20px);
+    font-size: clamp(16px,1.0416vw,1.0416vw);
     font-family: Roboto;
     border-radius: 30px;
     border: 0;
     box-shadow: 0px 0px 6px #000000;
-    width: clamp(200px,13.802vw,265px);
-    /* width: 100vw; */
     height: 60px;
-    margin-right: 55px;
     margin-top: 20px;
+    display: flex;
+    margin-right: 3.125vw;
+    width: clamp(200px,13.802vw,265px);
+}
+
+@media screen and (max-width: 480px) {
+    .buttonDiv img{
+        display: none;
+    }
+
 }

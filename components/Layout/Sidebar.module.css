@@ -1,4 +1,4 @@
-.Sidebar{
+.desktopNav{
     background-color: #F5F5F5;
     height: 928px;
     border-radius: 0 10px 10px 0;
@@ -48,9 +48,9 @@
 }
 
 .sbNav div h1{
-    margin-left: 20px;
+    margin-left: 1.041vw;
     align-self: center;
-    font-size: 1.05vw;
+    font-size: clamp(14px,1.05vw,24px);
     font-weight: 400;
 }
 
@@ -80,3 +80,67 @@
     align-items: center;
     margin: 10px 0;
 }   
+
+.Sidebar {
+    display: none;
+    position: absolute;
+  }
+
+
+@media screen and (max-width: 480px) {
+    .desktopNav {
+        display: none;
+        max-width: 80%;
+        background-color: aqua;
+      }
+    .Sidebar{
+        display: block;
+        background-color: #F5F5F5;
+        height: 928px;
+        border-radius: 0 10px 10px 0;
+        margin-top: 20px;
+        box-shadow: 0px 0px 2px #000000;
+        max-width: 80%;
+        width: 100%;
+        position: ab;
+    }
+
+    .sbNav{
+        max-width: 80.6vw;
+        width: 100vw;
+    }
+
+    .sbNav .inactive a{
+        max-width: 70.5vw;
+        width: 100vw;
+    }
+    
+    .sbNav .active a,.sbNav2 .active a{
+        max-width: 70.5vw;
+        width: 100vw;
+    }
+
+    .sbNav div h1{
+        align-self: center;
+        justify-content: center;
+        font-size: 4.05vw;
+        font-weight: 400;
+        margin-left: 20px;
+
+    }
+
+    .sbNav2{
+        max-width:80vw;
+        width: 100vw;
+    }
+
+    .sbNav2 div{
+        max-width: 70.5vw;
+        width: 100vw;
+    }
+
+    .sbNav2 div h1{
+        font-size: 4.05vw;
+        font-weight: 400;
+    }
+  }

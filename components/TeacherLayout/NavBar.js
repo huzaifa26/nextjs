@@ -1,11 +1,17 @@
 import styles from "./Layout.module.css"
 
 function NavBar(props){
+
+    const showMobileNavbar=()=>{
+        props.mobileNavHandler();
+    }
+
+
     return(
         <div className={styles.navbar}>
             <div className={styles.logoDiv}>
                 <img alt="" src="./TUTORS ONLINE-logo 2.svg"/>
-                <img alt="" src="./Group 208.svg"/>
+                <img onClick={showMobileNavbar} alt="" src="./Group 208.svg"/>
             </div>
             <div className={styles.searchDiv}>
                 <input className={styles.seachInput} type="text" placeholder="Search"></input>

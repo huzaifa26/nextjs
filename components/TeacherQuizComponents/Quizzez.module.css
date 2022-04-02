@@ -8,7 +8,7 @@
     flex-direction: column;
     border-radius: 10px;
     max-height: 782px;
-    overflow-x: hidden;
+    overflow: auto;
 }
 
 .heading{
@@ -60,8 +60,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 85%;
-    width: 100vw;
+    width: clamp(820px,85vw,1600px);
 }
 
 .tbody{
@@ -76,9 +75,10 @@
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 0px 10px 20px;
-    max-width: 80%;
-    min-height: 60px;
+        min-height: 60px;
     border-radius: 15px;
+    width: clamp(820px,81vw,1600px);
+
 }
 
 .thead th{
@@ -102,7 +102,7 @@
 }
 
 .tbody td button{
-    width: 5.208vw;
+    width: clamp(50px,5.208vw,100px);
     height: 40px;
     border-radius: 20px;
     border: 1px solid #023047;
@@ -110,7 +110,7 @@
     margin-left: -60px;
 }
 
-.tbody td:nth-child(5){
+/* .tbody td:nth-child(5){
     text-align: left;
 }
 
@@ -127,4 +127,26 @@
 .tbody td:nth-child(2){
     text-align: left;
     padding-left: 56px;
+} */
+
+@media screen and (max-width:480px) {
+    .upcomming{
+        max-width: 108%;
+        width: 100vw;
+    }
+
+    .tbody{
+        margin: 10px 0px 10px 0px;
+        padding: 0;
+
+    }
+
+    .thead{
+        padding: 0;
+    }
+
+    .tbody td,.thead th{
+        /* width: 500px !important; */
+         margin:0 3px;
+    }
 }

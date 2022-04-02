@@ -97,7 +97,7 @@ function Upcomming() {
             </div>
         </div>
 
-        <table>
+        <table height="199px">
                 <tr className={styles.thead}>
                     <th>Quiz Title</th>
                     <th>Class/Grade</th>

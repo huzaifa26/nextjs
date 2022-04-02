@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import styles from './CompletedQuiz.module.css';
 
 function CompletedQuiz() {

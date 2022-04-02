@@ -1,6 +1,6 @@
 .QuizInstructions{
-    height: clamp(640px,96vh, 1060px);
-    width: clamp(1100px,96vw,1850px);
+    height: 96vh;
+    width: clamp(350px,96vw,1850px);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     position: absolute;
@@ -55,6 +55,28 @@
 .QuizInstructions .crossImage{
     position: absolute;
     left: 95%;
-    top: 2%;
+    top: -2%;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1440px) {
+    .QuizInstructions .crossImage{
+        left: 92%;
+    }
+    
+}
+
+@media screen and (max-width: 786px) {
+    .QuizInstructions .crossImage{
+        left: 89%;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .QuizInstructions .crossImage{
+        left: 84%;
+        top: -3%;
+    }
+    
 }

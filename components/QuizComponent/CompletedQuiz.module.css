@@ -7,8 +7,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .heading{
@@ -20,7 +20,7 @@
 }
 
 .heading div h2{
-    font-size: 1.6vw;
+    font-size: clamp(20px,1.6vw,30px);
     font-weight: bold;
     line-height: 40px;
     color: #FE6903;
@@ -28,7 +28,7 @@
 }
 
 .heading div p{
-    font-size: 1.3vw;
+    font-size: clamp(16px,1.3vw,24px);
     font-weight: 400;
     line-height: 32px;
     color: #009444;
@@ -51,6 +51,12 @@
     background-color: #FFFFFF;
 }
 
+.completedQuiz table{
+    width: clamp(820px,85vw,1600px);
+    overflow: hidden;
+}
+
+
 .thead{
     font-weight: bold;
     color: #FFFFFF;
@@ -58,14 +64,16 @@
     background-color: #5A6268;
     display: flex;
     align-items: center;
-    max-width: 85%;
-    width: 100vw;
+    /* max-width: 85%;
+    width: 100vw; */
+    font-size: clamp(16px,1.0416vw,20px);
+    width: clamp(820px,85vw,1600px);
 }
 
 .thead tr{
     font-size: clamp(16px,1.05vw,20px);
     max-width: 95%;
-    width: 100vw;
+    width: clamp(820px,100%,1600px);
     margin-left: 20px;
     display: flex;
     justify-content: space-between;
@@ -74,7 +82,7 @@
 
 .tbody{
     padding: 0 23px 0 20px ;
-    font-size: 1.05vw;
+    font-size: clamp(16px,1.0416vw,20px);
     font-weight: medium;
     color: #2B3044;
     height: 80px;
@@ -84,9 +92,9 @@
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 10px 20px 20px;
-    max-width: 81%;
     min-height: 60px;
     border-radius: 15px;
+    width: clamp(820px,81vw,1560px);
 }
 
 .thead tr th{
@@ -105,4 +113,25 @@
     border: 1px solid #007BFF;
     background-color: #FFFFFF;
     margin-left: 20%;
+}
+
+@media screen and (max-width:480px) {
+    .completedQuiz{
+        max-width: 108%;
+        width: 100vw;
+    }
+
+    .tbody{
+        margin: 10px 0px 10px 0px;
+        padding: 0;
+    }
+
+    .thead{
+        padding: 0;
+    }
+
+    .tbody td{
+        width: 15%;
+        text-align: center;
+    }
 }

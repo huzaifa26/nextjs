@@ -1,10 +1,11 @@
 import styles from "./Sidebar.module.css"
 import {useRouter} from 'next/router';
 import Link from "next/link";
+import { useEffect } from "react";
 
-function Sidebar(){
-    const router=useRouter()
-    console.log(router.pathname)
+function Sidebar(props){
+    const router=useRouter();
+    const isMobNav=props.navBar || false;
 
     const nav=[
         {
@@ -84,10 +85,11 @@ function Sidebar(){
         },
     ]
 
-
+    let classes=styles.desktopNav;
 
     return(
-        <div className={styles.Sidebar}>
+        <>
+        <div className={classes}>
             <div className={styles.sbNav}>
                 {nav.map((li)=>{
                     return(
@@ -103,7 +105,6 @@ function Sidebar(){
                     </div>
                     )
                 })}
-                
             </div>
 
             <div className={styles.setting}>
@@ -122,6 +123,44 @@ function Sidebar(){
             </div>
             </div>
         </div>
+
+        {isMobNav && 
+            <div className={styles.Sidebar}>
+            <div className={styles.sbNav}>
+                {nav.map((li)=>{
+                    return(
+                    <div key={''} className={router.pathname === li.route?styles.active:styles.inactive}>
+                        <Link href={li.route}>
+                            <a>
+                            <div className={styles.imgdiv}>
+                                <img alt="" src={router.pathname === li.route?li.imageDark:li.image}/>
+                            </div>
+                            <h1>{li.title}</h1>
+                            </a>
+                        </Link>
+                    </div>
+                    )
+                })}
+            </div>
+
+            <div className={styles.setting}>
+            <div className={styles.sbNav2}>
+                {setting.map((li)=>{
+                    return(
+                        <div key={''}>
+                            <div className={styles.imgdiv}>
+                                <img alt="" src={li.image}/>
+                            </div>
+                            <h1>{li.title}</h1>
+                        </div>
+                    )
+                })}
+                
+            </div>
+            </div>
+        </div>
+        }
+        </>
     )
 }
 
