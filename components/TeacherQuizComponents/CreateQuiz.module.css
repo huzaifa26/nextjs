@@ -101,7 +101,8 @@
 .quizSection textarea{
     outline: none;
     margin: 50px 0;
-    width: 600px;
+    width: 31.25vw;
+    min-width: 300px;
     height: 329px;
     border: 0;
     border-bottom: 1px solid #707070;

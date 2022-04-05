@@ -18,7 +18,6 @@
     height: 121px;
     display: flex;
     justify-content: space-between;
-    max-width: 1600px;
 }
 
 .heading div h2{
