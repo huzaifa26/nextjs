@@ -144,5 +144,8 @@
 
 @media screen and (max-width:480px) {
 
-
+    .upcomming{
+        max-width: 108%;
+        width: 100vw;
+    }
 }
