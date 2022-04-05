@@ -18,7 +18,10 @@
 
 .buttonDiv{
     display: flex;
-    width: clamp(20px,100vw,1600px);
+    min-width: 90vw;
+    overflow-x: scroll;
+    padding-left: 5px;
+    padding-bottom: 2px;
 }
 
 .quiz .buttonInactive{
@@ -33,6 +36,7 @@
     margin-right: 3.125vw;
     margin-top: 20px;
     color: #2B3044;
+    min-width: 200px;
 }
 
 .quiz button{
@@ -65,11 +69,5 @@
     display: flex;
     margin-right: 3.125vw;
     width: clamp(200px,13.802vw,265px);
-}
-
-@media screen and (max-width: 480px) {
-    .buttonDiv img{
-        display: none;
-    }
-
+    min-width: 200px;
 }

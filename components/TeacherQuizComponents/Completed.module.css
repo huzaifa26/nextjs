@@ -7,9 +7,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    max-width: 1600px;
-    /* overflow-y: scroll; */
-    /* overflow-x: hidden; */
+    overflow: auto;
 }
 
 .heading{
@@ -18,7 +16,6 @@
     height: 121px;
     display: flex;
     justify-content: space-between;
-    max-width: 1600px;
 }
 
 .heading div h2{
@@ -53,8 +50,8 @@
 }
 
 .Completed table{
-    max-width: 1600px !important;
-    width: 100vw;
+    width: clamp(820px,85vw,1600px);
+    overflow: hidden;
 }
 
 .thead{
@@ -67,12 +64,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 85%;
-    width: 100vw;
+    width: clamp(820px,86vw,1600px);
 }
 
 .tbody{
-    padding: 0 23px 0 20px ;
+    /* padding: 0 23px 0 20px ; */
     font-size: clamp(16px,1.05vw,20px);
     font-weight: medium;
     color: #2B3044;
@@ -83,18 +79,21 @@
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 0px 10px 20px;
-    max-width: 80%;
     min-height: 60px;
     border-radius: 15px;
+    width: clamp(820px,81vw,1560px);
 }
 
 .thead th{
-    width: 10.475vw;
+    width: clamp(130px,14.475vw,250px);
+    margin: 0 3px;
+
 }
 
 .tbody td{
-    width: 10.475vw;
+    width: clamp(130px,15.475vw,240px);
     text-align: center;
+    margin: 0 3px;
 }
 
 .tbody td button{
@@ -107,11 +106,11 @@
 }
 
 .thead th:nth-child(5){
-    width: 26.041vw;
+    width: clamp(200px,26.041vw,400px);
 }
 
 .tbody td:nth-child(5){
-    width: 26.041vw;
+    width: clamp(200px,26.041vw,400px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,4 +129,36 @@
 
 .tbody td button:nth-child(4){
     border: 1px solid #219EBC;
+}
+
+@media screen and (max-width:1040px) {
+    .thead{
+        padding: 0 0px 0 0px ;
+    }
+    .tbody{
+        padding: 0 23px 0 0px ;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .Completed{
+        max-width: 108%;
+        width: 100vw;
+    }
+
+    .tbody{
+        margin: 10px 0px 10px 0px;
+        padding: 0;
+
+    }
+
+    .thead{
+        padding: 0;
+    }
+
+    .tbody td,.thead th{
+        /* width: 500px !important; */
+         margin:0 3px;
+    }
 }

@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    overflow: auto;
 }
 
 .heading{
@@ -15,7 +16,7 @@
     height: 121px;
     display: flex;
     justify-content: space-between;
-    max-width: 1600px;
+    min-width: 400px;
 }
 
 .heading div h2{
@@ -43,6 +44,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    min-width: 400px;
 }
 
 .quizSection div:first-child{
@@ -62,22 +64,23 @@
     color: #2B3044;
     text-indent: 78px;
     font-size: 24px;
+    font-size: clamp(16px,1.25vw,24px);
     background-repeat: no-repeat;
     background-position: 0% 50%;
+    width: clamp(300px,31.25vw,600px);
 }
 
 
 .quizSection div{
     display: flex;
-    width: 600px;
+    width: clamp(300px,31.25vw,600px);
     justify-content: space-between;
-    /* height: 200px; */
 }
 
 .quizSection h3{
     justify-items: flex-end;
     align-self: flex-end;
-    font-size: 24px;
+    font-size: clamp(16px,1.25vw,24px);
     color: #2B3044;
 }
 
@@ -90,7 +93,7 @@
     text-indent: 0;
     border: 0;
     border-radius: 25px;
-    font-size: 24px;
+    font-size: clamp(16px,1.25vw,24px);
     font-weight: bold;
     margin-top: 150px;
 }
@@ -104,7 +107,7 @@
     border-bottom: 1px solid #707070;
     color: #2B3044;
     text-indent: 78px;
-    font-size: 24px;
+    font-size: clamp(16px,1.25vw,24px);
     background-repeat: no-repeat;
     background-position: 0% 0%;
 }
@@ -120,7 +123,7 @@
     background-color: #FE6903;
     width: 172px;
     color: white;
-    font-size: 20px;
+    font-size: clamp(14px,1.0416vw,20px);
     position: relative;
 }
 
@@ -150,7 +153,7 @@
     align-items: center;
     height: 60px;
     width: 100%;
-    font-size: 20px;
+    font-size: clamp(14px,1.0416vw,20px);
     margin: 5px 0px;
     justify-content: space-between;
     border-bottom:1px solid #707070;
@@ -170,7 +173,7 @@
     align-items: center;
     height: 60px;
     width: 30%;
-    font-size: 20px;
+    font-size: clamp(14px,1.0416vw,20px);
     margin: 5px 0px;
     justify-content: space-between;
     color: #2B3044;
@@ -208,4 +211,12 @@
 }
 .quizSetting label img{
     margin-left: 310px;
+}
+
+
+@media screen and (max-width:480px) {
+    .CreateQuiz{
+        max-width: 108%;
+        width: 100vw;
+    }
 }

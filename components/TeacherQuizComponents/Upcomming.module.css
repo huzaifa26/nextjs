@@ -9,8 +9,7 @@
     border-radius: 10px;
     max-width: 1600px;
     /* max-height: 782px; */
-    overflow-y: scroll;
-    overflow-x: hidden;
+    overflow:auto;
 }
 
 .heading{
@@ -64,6 +63,7 @@
     align-items: center;
     max-width: 85%;
     width: 100vw;
+    min-width: 850px;
 }
 
 .tbody{
@@ -81,18 +81,20 @@
     max-width: 81%;
     min-height: 60px;
     border-radius: 15px;
+    min-width: 850px;
 }
 
 .thead th{
     width: 9.375vw;
     margin: 0 0.3vw;
-
+    min-width: 100px;
 }
 
 .tbody td{
     margin: 0 0.3vw;
     width: 10vw;
     text-align: center;
+    min-width: 100px;
 }
 
 .tbody td button{
@@ -101,11 +103,13 @@
     border-radius: 20px;
     border: 1px solid #023047;
     background-color: #FFFFFF;
-    margin: 0 4px;
+    margin: 0 2px;
+    min-width: 60px;
 }
 
 .thead th:nth-child(6){
     width: 25.041vw;
+    min-width: 300px;
 }
 
 .tbody td:nth-child(6){
@@ -113,6 +117,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 300px;
 }
 
 
@@ -133,5 +138,11 @@
 
 .tbody td button:nth-child(4){
     border: 1px solid #023047;
+
+}
+
+
+@media screen and (max-width:480px) {
+
 
 }

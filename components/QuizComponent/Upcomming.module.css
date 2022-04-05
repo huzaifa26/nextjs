@@ -51,7 +51,6 @@
 
 .upcomming table{
     width: clamp(820px,85vw,1600px);
-    max-height: 52px !important;
     overflow: hidden;
 }
 
