@@ -7,7 +7,7 @@
 
 .buttonDiv{
     display: flex;
-    min-width: 90vw;
+    min-width: 60vw;
     overflow-x: scroll;
     padding-left: 5px;
     padding-bottom: 2px;
@@ -66,4 +66,10 @@
     margin-right: 2.864vw;
     margin-top: 20px;
     min-width: 200px;
+}
+
+@media screen and (max-width:480px) {
+    .buttonDiv{
+        min-width: 90vw;
+    }
 }
