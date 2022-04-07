@@ -38,7 +38,7 @@ function Quiz(){
                     <div className={styles.buttonDiv}>
 
                         <button onClick={upcommingHandler} className={upccomming?styles.buttonActive:styles.buttonInactive}>
-                            <img alt="" src={upccomming?"./completedStudentD.png":"./completedStudent.png"}/>Upcomming<p>10</p>
+                            <img alt="" src={upccomming?"./completedStudentD.png":"./completedStudent.png"}/>Upcoming<p>10</p>
                         </button>
 
                         <button onClick={startedQuizHandler} className={startedQuiz?styles.buttonActive:styles.buttonInactive}>

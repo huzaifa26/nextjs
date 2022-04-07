@@ -6,7 +6,7 @@ function Upcomming() {
         {
             "qt":"Quiz Title",
             "c_g":'Class/Grade',
-            "c":"Course",
+            "c":"Subject",
             "t_n":'Tutors Name',
             'sd_t':"20-10-2021 | 10:00 PM",
             'ed_t':'21-10-2021 | 10:00 PM'
@@ -29,10 +29,9 @@ function Upcomming() {
         <table>
                 <tr className={styles.thead}>
                     <th>Quiz Title</th>
-                    <th>Class/Grade</th>
-                    <th>Course</th>
-                    <th>Start Data & Time</th>
-                    <th>End Data & Time</th>
+                    <th>Subject</th>
+                    <th>Start Date & Time</th>
+                    <th>End Date & Time</th>
                     <th>Actions</th>
                 </tr>
 
@@ -40,7 +39,6 @@ function Upcomming() {
                     return(
                         <tr key={''} className={styles.tbody}>
                             <td>{c.qt}</td>
-                            <td>{c.c_g}</td>
                             <td>{c.c}</td>
                             <td>{c.sd_t}</td>
                             <td>{c.ed_t}</td>

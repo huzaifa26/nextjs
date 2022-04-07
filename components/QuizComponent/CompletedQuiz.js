@@ -64,7 +64,7 @@ function CompletedQuiz() {
                     <th>Total Questions</th>
                     <th>Result</th>
                     <th>Status</th>
-                    <th>Actions</th>
+                    <th></th>
                 </tr>
             </div>
 

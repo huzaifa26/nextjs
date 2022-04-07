@@ -12,7 +12,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },
         {
             title:'Quiz title',
@@ -23,7 +23,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },{
             title:'Quiz title',
             cg:'Class/Grade',
@@ -33,7 +33,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },{
             title:'Quiz title',
             cg:'Class/Grade',
@@ -43,7 +43,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },{
             title:'Quiz title',
             cg:'Class/Grade',
@@ -53,7 +53,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },{
             title:'Quiz title',
             cg:'Class/Grade',
@@ -63,7 +63,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },{
             title:'Quiz title',
             cg:'Class/Grade',
@@ -73,7 +73,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },{
             title:'Quiz title',
             cg:'Class/Grade',
@@ -83,7 +83,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },{
             title:'Quiz title',
             cg:'Class/Grade',
@@ -93,7 +93,7 @@ function QuizActivity(props) {
             total_student:'Total Students',
             total_addended:"Total Attended",
             result_in_per:'Results in %',
-            status:'Upcomming'
+            status:'upcoming'
         },
     ]
 

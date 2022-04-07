@@ -5,7 +5,7 @@ function Completed(props) {
         {
             "qt":"Quiz Title",
             "c_g":'Class/Grade',
-            "c":"Course",
+            "c":"Subject",
             'c_t':'21-10-2021 | 10:00pm'
         },
     ]
@@ -26,7 +26,7 @@ function Completed(props) {
                 <tr className={styles.thead}>
                     <th>Quiz Title</th>
                     <th>Class/Grade</th>
-                    <th>Course</th>
+                    <th>Subject</th>
                     <th>Completed on & TIme</th>
                     <th>Actions</th>
                 </tr>

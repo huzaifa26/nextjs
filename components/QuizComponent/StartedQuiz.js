@@ -59,7 +59,7 @@ function StartedQuiz() {
                     {/* <th>Class/Grade</th> */}
                     <th>Course</th>
                     <th>Tutor's Name</th>
-                    <th>Questions Attempted</th>
+                    <th>Question Answered/Yotal questions</th>
                     <th>End Data & Time</th>
                     <th>Actions</th>
                 </tr>

@@ -5,7 +5,7 @@ function Quizzez(props) {
         {
             "qt":"Quiz Title",
             "c_g":'Class/Grade',
-            "c":"Course",
+            "c":"Subject",
             "t_n":'Tutors Name',
             'q_s':"Scheduled - Published",
         },
@@ -26,7 +26,7 @@ function Quizzez(props) {
                 <tr className={styles.thead}>
                     <th>Quiz Title</th>
                     <th>Class/Grade</th>
-                    <th>Course</th>
+                    <th>Subject</th>
                     <th>Tutor's Name</th>
                     <th>Quiz Status</th>
                     <th>Actions</th>

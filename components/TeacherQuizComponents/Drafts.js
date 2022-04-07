@@ -5,7 +5,7 @@ function Drafts(props) {
         {
             "qt":"Quiz Title",
             "c_g":'Class/Grade',
-            "c":"Course",
+            "c":"Subject",
             "t_n":'Tutors Name',
         },
     ]
@@ -25,8 +25,7 @@ function Drafts(props) {
                 <tr className={styles.thead}>
                     <th>Quiz Title</th>
                     <th>Class/Grade</th>
-                    <th>Course</th>
-                    <th>Tutor's Name</th>
+                    <th>Subject</th>
                     <th>Actions</th>
                 </tr>
                 {tableContent.map((c)=>{
@@ -35,7 +34,6 @@ function Drafts(props) {
                             <td>{c.qt}</td>
                             <td>{c.c_g}</td>
                             <td>{c.c}</td>
-                            <td>{c.t_n}</td>
                             <td><button><img alt="" src='./actionEye.png'/></button></td>
                         </tr>
                     )
