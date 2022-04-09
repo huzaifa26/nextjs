@@ -106,7 +106,7 @@ function TeacherQuiz(props) {
                 alt=""
                 src={upcomming ? "./darkupcomming.png" : "./upcomming.png"}
               />
-              <span> Upcoming</span> <p>10</p>
+              <span> Ungraded</span> <p>10</p>
             </button>
 
             <button
