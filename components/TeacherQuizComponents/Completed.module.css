@@ -137,7 +137,6 @@
 .tbody td button:nth-child(4){
     border: 1px solid #219EBC;
 }
-
 @media screen and (max-width:480px) {
     .Completed{
         max-width: 108%;
