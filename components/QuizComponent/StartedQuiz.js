@@ -55,6 +55,7 @@ function StartedQuiz() {
 
         <table>
                 <tr className={styles.thead}>
+                    <div>
                     <th>Quiz Title</th>
                     {/* <th>Class/Grade</th> */}
                     <th>Course</th>
@@ -62,6 +63,7 @@ function StartedQuiz() {
                     <th>Question Answered/Yotal questions</th>
                     <th>End Data & Time</th>
                     <th>Actions</th>
+                    </div>
                 </tr>
 
                 {tableContent.map((c)=>{

@@ -56,28 +56,27 @@
     overflow: hidden;
 }
 
-
 .thead{
+    font-size: clamp(16px,1.0416vw,20px);
     font-weight: bold;
     color: #FFFFFF;
     min-height: 80px;
     background-color: #5A6268;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    /* max-width: 85%;
-    width: 100vw; */
-    font-size: clamp(16px,1.0416vw,20px);
     width: clamp(820px,85vw,1600px);
 }
 
-.thead tr{
-    font-size: clamp(16px,1.05vw,20px);
-    max-width: 95%;
-    width: clamp(820px,100%,1600px);
-    margin-left: 20px;
+.thead div{
+    padding: 0 23px 0 20px ;
+    font-size: clamp(16px,1.0416vw,20px);
+    font-weight: medium;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px 10px 20px 20px;
+    width: clamp(820px,81vw,1560px);
 }
 
 .tbody{
@@ -98,12 +97,17 @@
 }
 
 .thead tr th{
-    width: 10%;
+    width: 19%;
 }
 
 .tbody td{
-    width: 10%;
+    width: 19%;
     text-align: center;
+}
+
+.tbody td:nth-child(7){
+    display: flex;
+    justify-content: center;
 }
 
 .tbody td button{
@@ -112,7 +116,6 @@
     border-radius: 20px;
     border: 1px solid #007BFF;
     background-color: #FFFFFF;
-    margin-left: 20%;
 }
 
 @media screen and (max-width:480px) {

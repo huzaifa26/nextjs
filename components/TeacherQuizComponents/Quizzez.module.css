@@ -51,7 +51,6 @@
 }
 
 .thead{
-    padding: 0 48px 0 37px;
     font-size: clamp(16px,1.05vw,20px);
     font-weight: bold;
     color: #FFFFFF;
@@ -61,6 +60,17 @@
     justify-content: space-between;
     align-items: center;
     width: clamp(820px,85vw,1600px);
+}
+
+.thead div{
+    padding: 0 23px 0 20px ;
+    font-size: clamp(16px,1.05vw,20px);
+    font-weight: medium;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 10px 20px;
+    width: clamp(820px,81vw,1600px);
 }
 
 .tbody{
@@ -81,13 +91,13 @@
 }
 
 .thead th{
-    width: 22.979vw;
+    width: 19%;
+    min-width: 129px;
 }
 
 .tbody td{
-    width: 20.979vw;
+    width: 19%;
     text-align: center;
-    margin: 0 3px;
 }
 
 .tbody td:last-child{

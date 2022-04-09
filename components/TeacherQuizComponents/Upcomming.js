@@ -28,11 +28,13 @@ function Upcomming() {
 
         <table>
                 <tr className={styles.thead}>
-                    <th>Quiz Title</th>
-                    <th>Subject</th>
-                    <th>Start Date & Time</th>
-                    <th>End Date & Time</th>
-                    <th>Actions</th>
+                    <div>
+                        <th>Quiz Title</th>
+                        <th>Subject</th>
+                        <th>Start Date & Time</th>
+                        <th>End Date & Time</th>
+                        <th>Actions</th>
+                    </div>
                 </tr>
 
                 {tableContent.map((c)=>{

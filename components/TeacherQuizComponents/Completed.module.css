@@ -55,7 +55,6 @@
 }
 
 .thead{
-    padding: 0 60px 0 27px;
     font-size: clamp(16px,1.05vw,20px);
     font-weight: bold;
     color: #FFFFFF;
@@ -65,6 +64,16 @@
     justify-content: space-between;
     align-items: center;
     width: clamp(820px,86vw,1600px);
+}
+
+.thead div{
+    font-size: clamp(16px,1.05vw,20px);
+    font-weight: medium;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 10px 20px;
+    width: clamp(820px,81vw,1560px);
 }
 
 .tbody{
@@ -85,15 +94,13 @@
 }
 
 .thead th{
-    width: clamp(130px,14.475vw,250px);
-    margin: 0 3px;
+    width: clamp(130px,19%,250px);
 
 }
 
 .tbody td{
-    width: clamp(130px,15.475vw,240px);
+    width: clamp(130px,19%,240px);
     text-align: center;
-    margin: 0 3px;
 }
 
 .tbody td button{
@@ -106,11 +113,11 @@
 }
 
 .thead th:nth-child(5){
-    width: clamp(200px,26.041vw,400px);
+    width: clamp(200px,26%,400px);
 }
 
 .tbody td:nth-child(5){
-    width: clamp(200px,26.041vw,400px);
+    width: clamp(200px,26%,400px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,16 +136,6 @@
 
 .tbody td button:nth-child(4){
     border: 1px solid #219EBC;
-}
-
-@media screen and (max-width:1040px) {
-    .thead{
-        padding: 0 0px 0 0px ;
-    }
-    .tbody{
-        padding: 0 23px 0 0px ;
-        margin: 0;
-    }
 }
 
 @media screen and (max-width:480px) {

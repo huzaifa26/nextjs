@@ -90,12 +90,14 @@ function Upcomming() {
 
         <table height="199px">
                 <tr className={styles.thead}>
-                    <th>Quiz Title</th>
-                    <th>Course</th>
-                    <th>Tutor's Name</th>
-                    <th>Start Data & Time</th>
-                    <th>End Data & Time</th>
-                    <th>Submission Countdown</th>
+                    <div>
+                        <th>Quiz Title</th>
+                        <th>Course</th>
+                        <th>Tutor's Name</th>
+                        <th>Start Data & Time</th>
+                        <th>End Data & Time</th>
+                        <th>Submission Countdown</th>
+                    </div>
                 </tr>
 
                 {tableContent.map((c)=>{

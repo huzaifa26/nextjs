@@ -58,7 +58,6 @@
 
 
 .thead{
-    padding: 0 48px 0 37px;
     font-size: clamp(16px,1.0416vw,20px);
     font-weight: bold;
     color: #FFFFFF;
@@ -67,9 +66,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 85%;
-    width: 100vw; */
     width: clamp(820px,85vw,1600px);
+}
+
+.thead div{
+    padding: 0 23px 0 20px ;
+    font-size: clamp(16px,1.0416vw,20px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 10px 20px;
+    width: clamp(820px,81vw,1560px);
 }
 
 .tbody{
@@ -84,19 +91,17 @@
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 0px 10px 20px;
-    /* max-width: 81%;
-    min-height: 60px; */
     border-radius: 15px;
     width: clamp(820px,81vw,1560px);
-
 }
 
 .thead th{
-    width: 21%;
+    width: 19%;
+    min-width: 129px;
 }
 
 .tbody td{
-    width: 19%;
+    width: 19% !important;
     text-align: center;
 }
 
@@ -106,10 +111,13 @@
     border-radius: 20px;
     border: 1px solid #023047;
     background-color: #FFFFFF;
-    margin-left: 37%;
     font-size: clamp(16px,1.0416vw,20px);
 }
 
+.tbody td:nth-child(6){
+    display: flex;
+    justify-content: center;
+}
 
 @media screen and (max-width:480px) {
     .startedQuiz{

@@ -7,17 +7,15 @@
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    max-width: 1600px;
-    /* max-height: 782px; */
-    overflow:auto;
+    overflow: auto;
 }
 
 .heading{
+    max-width: 100%;
     width: 100vw;
     height: 121px;
     display: flex;
     justify-content: space-between;
-    max-width: 1600px;
 }
 
 .heading div h2{
@@ -52,7 +50,6 @@
 }
 
 .thead{
-    padding: 0 48px 0 37px;
     font-size: clamp(16px,1.05vw,20px);
     font-weight: bold;
     color: #FFFFFF;
@@ -61,13 +58,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 85%;
-    width: 100vw;
-    min-width: 850px;
+    width: clamp(820px,86vw,1600px);
+}
+
+.thead div{
+    font-size: clamp(16px,1.05vw,20px);
+    font-weight: medium;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 10px 20px;
+    width: clamp(820px,81vw,1560px);
 }
 
 .tbody{
-    padding: 0 23px 0 20px ;
+    /* padding: 0 23px 0 20px ; */
     font-size: clamp(16px,1.05vw,20px);
     font-weight: medium;
     color: #2B3044;
@@ -78,23 +83,19 @@
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 0px 10px 20px;
-    max-width: 81%;
     min-height: 60px;
     border-radius: 15px;
-    min-width: 850px;
+    width: clamp(820px,81vw,1560px);
 }
 
 .thead th{
-    width: 9.375vw;
-    margin: 0 0.3vw;
-    min-width: 100px;
+    width: 19%;
+    min-width: 130px;
 }
 
 .tbody td{
-    margin: 0 0.3vw;
-    width: 10vw;
+    width: 19%;
     text-align: center;
-    min-width: 100px;
 }
 
 .tbody td button{

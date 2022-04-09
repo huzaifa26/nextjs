@@ -23,10 +23,12 @@ function Drafts(props) {
 
         <table>
                 <tr className={styles.thead}>
-                    <th>Quiz Title</th>
-                    <th>Class/Grade</th>
-                    <th>Subject</th>
-                    <th>Actions</th>
+                    <div>
+                        <th>Quiz Title</th>
+                        <th>Class/Grade</th>
+                        <th>Subject</th>
+                        <th>Actions</th>
+                    </div>
                 </tr>
                 {tableContent.map((c)=>{
                     return(

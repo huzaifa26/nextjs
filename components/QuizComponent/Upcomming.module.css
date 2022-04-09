@@ -55,7 +55,6 @@
 }
 
 .thead{
-    padding: 0 48px 0 37px;
     font-size: clamp(16px,1.05vw,20px);
     font-weight: bold;
     color: #FFFFFF;
@@ -64,10 +63,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* max-width: 85%; */
     overflow-x: scroll;    
     width: clamp(820px,85vw,1600px);
     margin: 0;
+}
+
+.thead div{
+    padding: 0 23px 0 20px ;
+    font-size: clamp(16px,1.05vw,20px);
+    font-weight: medium;
+    /* height: 80px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px 10px 20px;
+    width: clamp(820px,81vw,1560px);
+    /* min-height: 60px; */
 }
 
 .tbody{
@@ -82,14 +93,14 @@
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 0px 10px 20px;
-    /* max-width: 81%; */
     width: clamp(820px,81vw,1560px);
     min-height: 60px;
     border-radius: 15px;
 }
 
 .thead th{
-    width: 25%;
+    width: 19%;
+    min-width: 129px;
 }
 
 .tbody td{

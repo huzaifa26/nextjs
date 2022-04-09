@@ -58,6 +58,7 @@ function CompletedQuiz() {
         <table>
             <div className={styles.thead}>
                 <tr >
+                    <div>
                     <th>Quiz Title</th>
                     <th>Course</th>
                     <th>Tutor's Name</th>
@@ -65,6 +66,7 @@ function CompletedQuiz() {
                     <th>Result</th>
                     <th>Status</th>
                     <th></th>
+                    </div>
                 </tr>
             </div>
 

@@ -24,12 +24,14 @@ function Quizzez(props) {
         </div>
         <table>
                 <tr className={styles.thead}>
+                    <div>
                     <th>Quiz Title</th>
                     <th>Class/Grade</th>
                     <th>Subject</th>
                     <th>Tutor's Name</th>
                     <th>Quiz Status</th>
                     <th>Actions</th>
+                    </div>
                 </tr>
 
                 {tableContent.map((c)=>{
