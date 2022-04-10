@@ -6,7 +6,7 @@ function Quizzez(props) {
             "qt":"Quiz Title",
             "c_g":'Class/Grade',
             "c":"Subject",
-            "t_n":'Tutors Name',
+           
             'q_s':"Scheduled - Published",
         },
     ]
@@ -28,7 +28,7 @@ function Quizzez(props) {
                     <th>Quiz Title</th>
                     <th>Class/Grade</th>
                     <th>Subject</th>
-                    <th>Tutor's Name</th>
+                  
                     <th>Quiz Status</th>
                     <th>Actions</th>
                     </div>
@@ -40,7 +40,7 @@ function Quizzez(props) {
                             <td>{c.qt}</td>
                             <td>{c.c_g}</td>
                             <td>{c.c}</td>
-                            <td>{c.t_n}</td>
+
                             <td>{c.q_s}</td>
                             <td>
                                 <button><img alt="" src='./actionEye.png'/></button>

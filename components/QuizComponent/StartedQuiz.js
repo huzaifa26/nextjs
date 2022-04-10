@@ -64,9 +64,9 @@ function StartedQuiz() {
               {/* <th>Class/Grade</th> */}
               <th>Subject</th>
 
-              <th>Question Answered/Total questions</th>
+              <th>Questions Answered</th>
               <th>End Date & Time</th>
-              <th>Actions</th>
+              <th></th>
             </div>
           </tr>
 

@@ -20,7 +20,7 @@ function CompletedQuiz() {
     },
     {
       qt: "Quiz Title",
-      c: "Subjecy",
+      c: "Subject",
       q_a: "10",
       r: "4",
       s: "Pending",

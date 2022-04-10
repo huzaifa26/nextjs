@@ -6,7 +6,7 @@ function QuizActivity(props) {
         {
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -17,7 +17,7 @@ function QuizActivity(props) {
         {
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -27,7 +27,7 @@ function QuizActivity(props) {
         },{
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -37,7 +37,7 @@ function QuizActivity(props) {
         },{
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -47,7 +47,7 @@ function QuizActivity(props) {
         },{
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -57,7 +57,7 @@ function QuizActivity(props) {
         },{
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -67,7 +67,7 @@ function QuizActivity(props) {
         },{
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -77,7 +77,7 @@ function QuizActivity(props) {
         },{
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -87,7 +87,7 @@ function QuizActivity(props) {
         },{
             title:'Quiz title',
             cg:'Class/Grade',
-            Course:'Course',
+            Subject:'Subject',
             startTime_Data:'Start Date & Time',
             endTime_date:'End Date & Time',
             total_student:'Total Students',
@@ -115,7 +115,7 @@ function QuizActivity(props) {
                     <div key={''} className={styles.activity}>
                         <p>{content.title}</p>
                         <p>{content.cg}</p>
-                        <p>{content.Course}</p>
+                        <p>{content.Subject}</p>
                         <p>{content.startTime_Data}</p>
                         <p>{content.endTime_date}</p>
                         <p>{content.total_student}</p>
