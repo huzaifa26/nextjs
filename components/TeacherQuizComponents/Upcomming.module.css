@@ -174,8 +174,11 @@
     }
     .thead{
         width: 89.5vw;
+        font-size: small;
     }
     .tbody{
+                font-size: small;
+
  width: 81vw;  
      padding-right: 12px;
         padding-left: 12px;  
