@@ -26,6 +26,27 @@ function CompletedQuiz() {
       s: "Pending",
     },
     {
+      qt: "Quiz Title",
+      c: "Subject",
+      q_a: "10",
+      r: "4",
+      s: "Pending",
+    },
+    {
+      qt: "Quiz Title",
+      c: "Subject",
+      q_a: "10",
+      r: "4",
+      s: "Pending",
+    },
+    {
+      qt: "Quiz Title",
+      c: "Subject",
+      q_a: "10",
+      r: "4",
+      s: "Pending",
+    },
+    {
       qt: "Quiz title",
       c: "Subject",
       q_a: "10",

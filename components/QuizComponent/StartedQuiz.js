@@ -11,6 +11,36 @@ function StartedQuiz() {
       ques: "10/15",
       ed_t: "21-10-2021 | 10:00 PM",
     },
+    {
+      qt: "Quiz Title",
+      c: "Subject",
+      ques: "10/15",
+      ed_t: "21-10-2021 | 10:00 PM",
+    },
+    {
+      qt: "Quiz Title",
+      c: "Subject",
+      ques: "10/15",
+      ed_t: "21-10-2021 | 10:00 PM",
+    },
+    {
+      qt: "Quiz Title",
+      c: "Subject",
+      ques: "10/15",
+      ed_t: "21-10-2021 | 10:00 PM",
+    },
+    {
+      qt: "Quiz Title",
+      c: "Subject",
+      ques: "10/15",
+      ed_t: "21-10-2021 | 10:00 PM",
+    },
+    {
+      qt: "Quiz Title",
+      c: "Subject",
+      ques: "10/15",
+      ed_t: "21-10-2021 | 10:00 PM",
+    },
   ];
 
   const [showInstructions, setShowInstructions] = useState(false);

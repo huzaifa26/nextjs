@@ -3,12 +3,12 @@
     background-color: #FFFFFF;
     max-width: 99%;
     width: 100vw;
-    height: 782px;
+    min-height: 782px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    max-height: 782px;
-    overflow-y: auto; 
+   
+    
     overflow-x: auto; 
 }
 

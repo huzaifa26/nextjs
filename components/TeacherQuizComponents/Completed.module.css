@@ -3,11 +3,12 @@
     background-color: #FFFFFF;
     max-width: 100%;
     width: 100vw;
-    height: 782px;
+    min-height: 782px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    overflow: auto;
+    
+    overflow-x: auto;
 }
 
 .heading{
