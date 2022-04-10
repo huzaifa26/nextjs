@@ -75,7 +75,7 @@ function TeacherQuiz(props) {
                 alt=""
                 src={quizzes ? "./darkquizzez.png" : "./quizzez.png"}
               />
-              <span>Quizzes</span> <p>10</p>
+              <span>Quizzes</span> <p className={styles.p}>10</p>
             </button>
 
             <button
@@ -85,7 +85,7 @@ function TeacherQuiz(props) {
               }
             >
               <img alt="" src={createQuiz ? "./darkcq.png" : "./cq.png"} />
-              <span>Create Quiz</span> <p>10</p>
+              <span>Create Quiz</span> <p className={styles.p}>10</p>
             </button>
 
             <button
@@ -93,7 +93,7 @@ function TeacherQuiz(props) {
               className={drafts ? styles.buttonActive : styles.buttonInactive}
             >
               <img alt="" src={drafts ? "./darkdraft.png" : "./drafts.png"} />
-              <span>Drafts</span> <p>10</p>
+              <span>Drafts</span> <p className={styles.p}>10</p>
             </button>
 
             <button
@@ -106,7 +106,7 @@ function TeacherQuiz(props) {
                 alt=""
                 src={upcomming ? "./darkupcomming.png" : "./upcomming.png"}
               />
-              <span> Ungraded</span> <p>10</p>
+              <span> Ungraded</span> <p className={styles.p}>10</p>
             </button>
 
             <button
@@ -120,7 +120,7 @@ function TeacherQuiz(props) {
                 src={completed ? "./darkcompleted.png" : "./completed.png"}
               />
               <span> Completed </span>
-              <p>10</p>
+              <p className={styles.p}>10</p>
             </button>
           </div>
 

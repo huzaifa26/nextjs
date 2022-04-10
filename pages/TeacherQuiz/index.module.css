@@ -12,7 +12,7 @@
     /* overflow-x: scroll; */
     padding-left: 5px;
     padding-bottom: 2px;
-    justify-content: center;
+
 }
 
 .quiz .quizh1{
@@ -83,4 +83,13 @@
     .buttonDiv{
         min-width: 90vw;
     }
+    /* Font size will be small at lower width devices */
+    .quiz .buttonActive, .quiz .buttonInactive {
+    font-size: small;
+}
+
+.quiz button p{
+    font-size: medium;
+    
+}
 }
