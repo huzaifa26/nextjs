@@ -213,11 +213,21 @@
 .quizSetting label img{
     margin-left: 310px;
 }
+.quizSection  input[type="number"]::-webkit-input-placeholder{
+ margin-right: 10px;
+}
 
+.quizSection  input[type="number"]{
+ width: 240px;
+}
 
 @media screen and (max-width:480px) {
     .CreateQuiz{
         max-width: 108%;
         width: 100vw;
     }
+.quizSection  input[type="number"]{
+ width: 100%;
+}
+    
 }
