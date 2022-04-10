@@ -1,15 +1,19 @@
 .upcomming{
     margin-top: 20px;
     background-color: #FFFFFF;
-    max-width: 99%;
-    width: 100vw;
-    height: 782px;
+    width: 95%;
+    /* width: 100vw; */
+    min-height: 782px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    overflow: auto;
+   
+    /* overflow: auto; */
 }
 
+.upcomming table{
+    width: 10;
+}
 .heading{
     max-width: 100%;
     width: 100vw;
@@ -50,7 +54,10 @@
 }
 
 .thead{
-    font-size: clamp(16px,1.05vw,20px);
+    
+    position: relative;
+     gap: 10px;
+    font-size: 16px;
     font-weight: bold;
     color: #FFFFFF;
     min-height: 80px;
@@ -58,10 +65,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: clamp(820px,86vw,1600px);
+    width: 78.22vw;
 }
 
 .thead div{
+    flex-wrap: wrap;
     font-size: clamp(16px,1.05vw,20px);
     font-weight: medium;
     display: flex;
@@ -72,30 +80,43 @@
 }
 
 .tbody{
+    gap: 10px;
+    padding-bottom: 12px;
+        padding-top: 12px;
+
+    flex-wrap: wrap;
     /* padding: 0 23px 0 20px ; */
     font-size: clamp(16px,1.05vw,20px);
     font-weight: medium;
     color: #2B3044;
-    height: 80px;
+    min-height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #F8F8FF;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     margin: 10px 0px 10px 20px;
-    min-height: 60px;
+    /* min-height: 60px; */
     border-radius: 15px;
-    width: clamp(820px,81vw,1560px);
+    width: 75vw;
 }
 
 .thead th{
-    width: 19%;
-    min-width: 130px;
+    flex: 1;
+     width: 19%;
+    
+    min-width: 70px;
+    margin-right: 3px;
+    
 }
 
 .tbody td{
+    flex: 1;
     width: 19%;
+    min-width: 70px;
     text-align: center;
+        margin-right: 3px;
+
 }
 
 .tbody td button{
@@ -109,16 +130,19 @@
 }
 
 .thead th:nth-child(5){
-    width: 25.041vw;
-    min-width: 300px;
+   flex: 2;
+   min-width: 200px;
+   
 }
 
 .tbody td:nth-child(5){
-    width: 25.041vw;
+    
+    flex: 2;
+   min-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 300px;
+ 
 }
 
 
@@ -148,5 +172,14 @@
         max-width: 108%;
         width: 100vw;
     }
+    .thead{
+        width: 89.5vw;
+    }
+    .tbody{
+ width: 81vw;  
+     padding-right: 12px;
+        padding-left: 12px;  
+}
 
 }
+
