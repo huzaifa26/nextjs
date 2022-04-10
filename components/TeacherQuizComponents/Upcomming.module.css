@@ -172,6 +172,10 @@
         max-width: 108%;
         width: 100vw;
     }
+  .heading div p{
+    font-size:small;
+  
+}
     .thead{
         width: 89.5vw;
         font-size: small;

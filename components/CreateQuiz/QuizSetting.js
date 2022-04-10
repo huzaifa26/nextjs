@@ -37,7 +37,7 @@ function QuizSetting() {
             <label> <p>Randomize Questions</p><input type={'checkbox'}  placeholder='Right Answer'></input></label>
             <label> <p>Quiz Timer</p>{showSetting && <img alt="" onClick={showSettingModal} src="./settingIcon.png"/>} <input onChange={showSettingHandler} type={'checkbox'}  placeholder='Right Answer'></input></label>
             <label> <p>Auto Advance</p><input type={'checkbox'}  placeholder='Right Answer'></input></label>
-            <label> <p>Quiz Title</p>{showSetting1 && <img alt="" onClick={showSettingModal2} src="./settingIcon.png"/>} <input onChange={showSettingHandler1} type={'checkbox'}  placeholder='Right Answer'></input></label>
+            
         </div>
      );
 }
