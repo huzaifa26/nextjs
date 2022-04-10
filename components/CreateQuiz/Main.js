@@ -58,7 +58,7 @@ function Main(props) {
         style={{ backgroundImage: "url(./clock.png)" }}
         type={"number"}
         min="0"
-        placeholder={"Duration Minutes"}
+        placeholder={"Duration in Minutes"}
       />
 
       {/* <div className={styles.buttonDiv}>
