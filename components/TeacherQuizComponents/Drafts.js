@@ -1,6 +1,12 @@
 import styles from "./Drafts.module.css";
+import { useDispatch, useSelector } from "react-redux";
+
 
 function Drafts(props) {
+
+  const quiz = useSelector((state) => {console.log(state.quiz);return state.quiz});
+
+
   const tableContent = [
     {
       qt: "Quiz Title",

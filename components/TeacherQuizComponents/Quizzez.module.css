@@ -4,10 +4,10 @@
     max-width:100%;
     width: 100vw;
     min-height: 782px;
+    height: 150vw;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-  
   overflow-x: auto;
 }
 

@@ -1,77 +1,37 @@
-import styles from './Upcomming.module.css'
+import styles from './Upcomming.module.css';
+import { useSelector } from 'react-redux';
 
-function Upcomming() {
+
+function Upcomming(props) {
+
+  const quizez=useSelector(state=>state.allQuizez)
+
+  console.log(quizez)
 
     const tableContent = [
       {
-        qt: "Quiz Title",
-        c: "Subject",
-
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
-      {
-        qt: "Quiz Title",
-        c: "Subject",
-        sd_t: "20-10-2021 | 10:00 PM",
-        ed_t: "21-10-2021 | 10:00 PM",
-      },
+        RandomizeNo: true,
+        className: "Class / Grade 1",
+        course: "Computer Science",
+        endDate: "2022-05-25",
+        endTime: "21:10",
+        instruction: "Complete the Quiz in Given Time. ",
+        questions: [
+            {questionType: 'Multiple Choice Questions', mcqQuestion: '2+2=?', optionMcq1: '2', optionMcq2: '8', optionMcq3: '4', optionMcq4: "6",questionType: "Multiple Choice Questions"},
+            {questionType: 'True / False', tfquestion: '1+1=2?', answer: true},
+            {questionType: 'Fill-in-the-Blanks', tfquestion: 'what is 2+_=4?', answer: '2'},
+            {questionType: 'Multiple Answers', mcqQuestion: 'Select all divisor of 4.', optionMcq1: '8', optionMcq2: '4', optionMcq3: '2',optionMcq4: "1",questionType: "Multiple Answers"},
+            {questionType: 'Numerical Answer', naQuestion: 'when is 5+5?', naType: 'Two Digit', naAnswer: '10'},
+            {questionType: 'Long Answer', laQuestion: 'Define derivation?', laAnswer: ''},
+        ],
+        quizTimer: true,
+        quizbar: true,
+        qutoAdvance: true,
+        startDate: "2022-05-25",
+        startTime: "21:00",
+        time: "10",
+        title: "Quiz 1",
+      }
     ];
 
 
@@ -101,11 +61,11 @@ function Upcomming() {
                 {tableContent.map((c)=>{
                     return(
                         <tr key={''} className={styles.tbody}>
-                            <td>{c.qt}</td>
-                            <td>{c.c}</td>
-                            <td>{c.sd_t}</td>
-                            <td>{c.ed_t}</td>
-                            <td>{"Timer"}</td>
+                            <td>{c.title}</td>
+                            <td>{c.course}</td>
+                            <td>{c.startDate + " | " + c.startTime}</td>
+                            <td>{c.endDate + " | " + c.endTime}</td>
+                            <td>{c.time}</td>
                         </tr>
                     )
                 })}

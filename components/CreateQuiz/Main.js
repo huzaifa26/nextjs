@@ -7,66 +7,52 @@ function Main(props) {
   const quizCourse = useRef();
   const quizDuration = useRef();
 
-  const nextHandler = () => {
-    quizClass.current.focus();
-    if (quizTitle && quizClass && quizCourse) {
-      console.log("haha");
-    }
-  };
-
   return (
     <div>
       <input
-        ref={quizTitle}
         style={{ backgroundImage: "url(./titleIcon.png)" }}
         placeholder="Enter Quiz Name/Title"
         type={"text"}
+        onChange={e=>props.getMainTitle(e.target.value)}
       ></input>
       <select
-        ref={quizClass}
         style={{ backgroundImage: "url(./classIcon.png)" }}
         id="class"
         name="class"
+        onChange={e=>props.getMainClass(e.target.value)}
       >
         <option value="" disabled selected>
           Select Class / Grade
         </option>
-        <option value="volvo">Class / Grade 1</option>
-        <option value="saab">Class / Grade 2</option>
-        <option value="fiat">Class / Grade 3</option>
-        <option value="audi">Class / Grade 4</option>
+        <option value="Class / Grade 1">Class / Grade 1</option>
+        <option value="Class / Grade 2">Class / Grade 2</option>
+        <option value="Class / Grade 3">Class / Grade 3</option>
+        <option value="Class / Grade 4">Class / Grade 4</option>
       </select>
       <select
-        ref={quizCourse}
         style={{ backgroundImage: "url(./courseIcon.png)" }}
         id="course"
         name="course"
+        onChange={e=>props.getMainCourse(e.target.value)}
       >
         <option value="" disabled selected>
           Enter Course Name or Select
         </option>
-        <option value="volvo">Computer Science </option>
-        <option value="saab">English</option>
-        <option value="fiat">Maths</option>
-        <option value="audi">Physics</option>
-        <option value="audi">Chemistry</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Computer Science">English</option>
+        <option value="Maths">Maths</option>
+        <option value="Physics">Physics</option>
+        <option value="auChemistrydi">Chemistry</option>
       </select>
 
       <input
-        ref={quizDuration}
         className={styles.num}
         style={{ backgroundImage: "url(./clock.png)" }}
         type={"number"}
         min="0"
         placeholder={"Duration in Minutes"}
+        onChange={e=>props.getMainQuizTime(e.target.value)}
       />
-
-      {/* <div className={styles.buttonDiv}>
-                    <button >Back</button>
-                    {/* {<button className={styles.addQuestion}>Add Question</button>}
-                    <button onClick={nextHandler}>Next</button>
-                </div>
-                 */}
     </div>
   );
 }

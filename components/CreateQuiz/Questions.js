@@ -1,10 +1,13 @@
 import styles from "../TeacherQuizComponents/CreateQuiz.module.css";
-import { useState,useRef } from 'react';
+import { useState, useRef, useEffect } from "react";
 
 function Questions(props) {
+  const questionType = useRef();
+  let [questionNo, setquestionNo] = useState();
 
-  const questionType=useRef();
-
+  useEffect(() => {
+    setquestionNo(props.id || "");
+  }, [props.id]);
 
   const [mcq, setmcq] = useState(false);
   const [tf, settf] = useState(false);
@@ -14,7 +17,7 @@ function Questions(props) {
   const [sa, setsa] = useState(false);
   const [la, setla] = useState(false);
 
-  const setAllFalse=()=>{
+  const setAllFalse = () => {
     setmcq(false);
     settf(false);
     setfitb(false);
@@ -22,45 +25,161 @@ function Questions(props) {
     setna(false);
     setsa(false);
     setla(false);
-  }
+  };
 
   const selectQuestionHandler = () => {
     setAllFalse();
-
     switch (questionType.current.value) {
-      case "mcq":
+      case "Multiple Choice Questions":
         setmcq(true);
         break;
 
-      case "tf":
+      case "True / False":
         settf(true);
         break;
 
-      case "fitb":
+      case "Fill-in-the-Blanks":
         setfitb(true);
         break;
 
-      case "ma":
+      case "Multiple Answers":
         setma(true);
         break;
 
-      case "na":
+      case "Numerical Answer":
         setna(true);
         break;
 
-      case "sa":
+      case "Short Answer":
         setsa(true);
         break;
 
-      case "la":
+      case "Long Answer":
         setla(true);
         break;
     }
   };
 
+  let style1 = null;
+  if (mcq || tf || fitb || ma || na || sa || la) {
+    style1 = {
+      minHeight: "500px",
+      marginBottom: "120px",
+    };
+  }
+
+  const removeDivHandler = (id) => {
+
+    props.removeDiv(id);
+  };
+
+  const mcqRef = useRef();
+  const tfRef = useRef();
+  const fitbRef = useRef();
+  const maRef = useRef();
+  const naRef = useRef();
+  const saRef = useRef();
+  const laRef = useRef();
+
+
+  const addMCQToArray = (id) => {
+    let question = {
+      id:id,
+      questionType: questionType.current.value,
+      question: mcqRef.current.question.value,
+      options:[
+        mcqRef.current.optionMcq1.value,
+        mcqRef.current.optionMcq2.value,
+        mcqRef.current.optionMcq3.value,
+        mcqRef.current.optionMcq4.value,
+      ],
+      correctMcq1: mcqRef.current.correctMcq1.checked,
+      correctMcq2: mcqRef.current.correctMcq2.checked,
+      correctMcq3: mcqRef.current.correctMcq3.checked,
+      correctMcq4: mcqRef.current.correctMcq4.checked,
+    };
+    props.getQuestionsintoArray(question);
+  };
+
+  const getTrueFalseToArray = (id) => {
+    let answer = false;
+    if (tfRef.current.trueCheckbox.checked) {
+      answer = true;
+    }
+
+    let question = {
+      id:id,
+      questionType: questionType.current.value,
+      question: tfRef.current.question.value,
+      answer,
+    };
+    props.getQuestionsintoArray(question);
+  };
+
+  const getFitbToArray = (id) => {
+    let question = {
+      id,
+      questionType: questionType.current.value,
+      question: fitbRef.current.question.value,
+      answer: fitbRef.current.fitbAnswer.value,
+    };
+    props.getQuestionsintoArray(question);
+  };
+
+  const getMAToArray = (id) => {
+    let question = {
+      id,
+      questionType: questionType.current.value,
+      question: maRef.current.question.value,
+      options:[
+        maRef.current.optionMcq1.value,
+        maRef.current.optionMcq2.value,
+        maRef.current.optionMcq3.value,
+        maRef.current.optionMcq4.value,
+      ],
+      correctMcq1: maRef.current.correctMcq1.checked,
+      correctMcq2: maRef.current.correctMcq2.checked,
+      correctMcq3: maRef.current.correctMcq3.checked,
+      correctMcq4: maRef.current.correctMcq4.checked,
+    };
+    props.getQuestionsintoArray(question);
+  };
+
+  const getNAToArray = (id) => {
+    let question = {
+      id,
+      questionType: questionType.current.value,
+      question: naRef.current.question.value,
+      naType: naRef.current.naType.value,
+      answer: naRef.current.answer.value,
+    };
+    props.getQuestionsintoArray(question);
+  };
+
+  const getSAToArray = (id) => {
+    let question = {
+      id,
+      questionType: questionType.current.value,
+      question: saRef.current.question.value,
+      answer: saRef.current.answer.value,
+    };
+    props.getQuestionsintoArray(question);
+  };
+
+  const getLAToArray = (id) => {
+    let question = {
+      id,
+      questionType: questionType.current.value,
+      question: laRef.current.question.value,
+      answer: laRef.current.answer.value,
+    };
+    props.getQuestionsintoArray(question);
+  };
+
+
   return (
-    <>
-      <div>
+    <div style={style1} className={styles.QuestionOuterDiv}>
+      <div className={styles.QuestionDiv}>
         <select
           onChange={selectQuestionHandler}
           ref={questionType}
@@ -71,222 +190,325 @@ function Questions(props) {
           <option value="" disabled selected>
             Select Question Type
           </option>
-          <option value="mcq">Multiple Choice Questions</option>
-          <option value="tf">True / False</option>
-          <option value="fitb">Fill-in-the-Blanks</option>
-          <option value="ma">Multiple Answers</option>
-          <option value="na">Numerical Answer</option>
-          <option value="sa">Short Answer</option>
-          <option value="la">Long Answer</option>
+          <option value="Multiple Choice Questions">
+            Multiple Choice Questions
+          </option>
+          <option value="True / False">True / False</option>
+          <option value="Fill-in-the-Blanks">Fill-in-the-Blanks</option>
+          <option value="Multiple Answers">Multiple Answers</option>
+          <option value="Numerical Answer">Numerical Answer</option>
+          <option value="Short Answer">Short Answer</option>
+          <option value="Long Answer">Long Answer</option>
         </select>
-        <h3>1 of 1 Quiz Question</h3>
+        <h3>
+          {questionNo} of {props.Length} Quiz Question : {props.id}
+        </h3>
+        <button
+          id={questionNo}
+          onClick={() => {
+            removeDivHandler(props.id);
+          }}
+        >
+          -
+        </button>
       </div>
 
       {mcq && (
-        <div className={styles.ma}>
+        <form onSubmit={(e)=>{e.preventDefault();addMCQToArray(props.id)}} ref={mcqRef} className={styles.ma}>
           <input
             style={{ backgroundImage: "url(./maIcon2.png)" }}
             placeholder="Enter Quiz Question"
+            name="question"
           ></input>
 
           <div>
             <input
+              name="optionMcq1"
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              placeholder="Enter Quiz Question"
+              placeholder="Enter Quiz answer"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>
+              <input
+                name="correctMcq1"
+                value={"correct"}
+                type={"checkbox"}
+                placeholder="Right Answer"
+              ></input>
               Correct Answer
             </label>
           </div>
           <div>
             <input
+              name="optionMcq2"
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              placeholder="Enter Quiz Question"
+              placeholder="Enter Quiz answer"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>
+              <input
+                name="correctMcq2"
+                value={"correct"}
+                type={"checkbox"}
+                placeholder="Right Answer"
+              ></input>
               Correct Answer
             </label>
           </div>
           <div>
             <input
+              name="optionMcq3"
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              placeholder="Enter Quiz Question"
+              placeholder="Enter Quiz answer"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>
+              <input
+                name="correctMcq3"
+                value={"correct"}
+                type={"checkbox"}
+                placeholder="Right Answer"
+              ></input>
               Correct Answer
             </label>
           </div>
           <div>
             <input
+              name="optionMcq4"
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              placeholder="Enter Quiz Question"
+              placeholder="Enter Quiz answer"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>
+              <input
+                name="correctMcq4"
+                value={"correct"}
+                type={"checkbox"}
+                placeholder="Right Answer"
+              ></input>
               Correct Answer
             </label>
           </div>
-        </div>
+          <button type="submit" className={styles.btn}>
+            +
+          </button>
+        </form>
       )}
-      
+
       {tf && (
-        <div className={styles.ma}>
+        <form ref={tfRef} onSubmit={(e)=>{e.preventDefault();getTrueFalseToArray(props.id)}} className={styles.ma}>
           <input
             style={{ backgroundImage: "url(./mcqQuestionMark.png)" }}
             placeholder="Enter Quiz Question"
+            name="question"
           ></input>
           <div>
             <input
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              defaultValue="True"
+              value="True"
+              name="true"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>
+              <input
+                type={"checkbox"}
+                placeholder="Right Answer"
+                name="trueCheckbox"
+              ></input>
               Correct Answer
             </label>
           </div>
           <div>
             <input
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              defaultValue="False"
+              value="False"
+              name="false"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>
+              <input
+                type={"checkbox"}
+                placeholder="Right Answer"
+                name="falseCheckbox"
+              ></input>
               Correct Answer
             </label>
           </div>
-        </div>
+          <button type="submit" className={styles.btn}>
+            +
+          </button>
+        </form>
       )}
 
       {fitb && (
-        <div className={styles.mcq}>
+        <form ref={fitbRef} onSubmit={(e)=>{e.preventDefault();getFitbToArray(props.id)}} className={styles.mcq}>
           <input
             style={{ backgroundImage: "url(./mcqQuestionMark.png)" }}
             placeholder="Enter Quiz Question"
+            name="question"
           ></input>
           <input
             style={{ backgroundImage: "url(./mcqSelect.png)" }}
             placeholder="Right Answer"
+            name="fitbAnswer"
           ></input>
-        </div>
+          <button type="submit" className={styles.btn}>
+            +
+          </button>
+        </form>
       )}
 
       {na && (
-        <div className={styles.mcq}>
+        <form ref={naRef} onSubmit={(e)=>{e.preventDefault();getNAToArray(props.id)}} className={styles.mcq}>
           <input
             style={{ backgroundImage: "url(./mcqQuestionMark.png)" }}
             placeholder="Enter Quiz Question"
+            name="question"
           ></input>
           <select
             style={{ backgroundImage: "url(./questionTypeIcon.png)" }}
             placeholder="Select Question Type"
             type={"text"}
+            name="naType"
           >
             <option value="" disabled selected>
               Select Question Type
             </option>
-            <option value="mcq">Date</option>
-            <option value="tf">Single Digit</option>
-            <option value="fitb">Two Digit</option>
-            <option value="ma">Multiple Digit</option>
-            <option value="na">Decimals</option>
+            <option value="Date">Date</option>
+            <option value="Single Digit">Single Digit</option>
+            <option value="Two Digit">Two Digit</option>
+            <option value="Multiple Digit">Multiple Digit</option>
+            <option value="Decimals">Decimals</option>
           </select>
           <input
             style={{ backgroundImage: "url(./mcqSelect.png)" }}
             placeholder="Right Answer"
+            name="anwser"
           ></input>
-        </div>
+          <button type="submit" className={styles.btn}>
+            +
+          </button>
+        </form>
       )}
 
       {sa && (
-        <div className={styles.mcq}>
+        <form ref={saRef} onSubmit={(e)=>{e.preventDefault();getSAToArray(props.id)}} className={styles.mcq}>
           <input
             style={{ backgroundImage: "url(./mcqQuestionMark.png)" }}
+            name="question"
             placeholder="Enter Quiz Question"
           ></input>
           <input
             style={{ backgroundImage: "url(./mcqSelect.png)" }}
             placeholder="Right Answer"
+            name="answer"
           ></input>
-        </div>
+          <button type="submit" className={styles.btn}>
+            +
+          </button>
+        </form>
       )}
 
       {la && (
-        <div className={styles.mcq}>
+        <form ref={laRef} onSubmit={(e)=>{e.preventDefault();getLAToArray(props.id)}} className={styles.mcq}>
           <input
             style={{ backgroundImage: "url(./mcqQuestionMark.png)" }}
             placeholder="Enter Quiz Question"
+            name="question"
           ></input>
           <input
             style={{ backgroundImage: "url(./mcqSelect.png)" }}
             placeholder="Right Answer"
+            name="answer"
           ></input>
-        </div>
+          <button type="submit" className={styles.btn}>
+            +
+          </button>
+        </form>
       )}
 
       {ma && (
-        <div className={styles.ma}>
+        <form ref={maRef} onSubmit={(e)=>{e.preventDefault();getMAToArray(props.id)}} className={styles.ma}>
           <input
             style={{ backgroundImage: "url(./maIcon2.png)" }}
             placeholder="Enter Quiz Question"
+            name="question"
           ></input>
 
           <div>
             <input
+              name="optionMcq1"
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              placeholder="Enter Quiz Question"
+              placeholder="Enter Quiz Answer"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>Enter
-              Option 1
+              <input
+                name="correctMcq1"
+                value={"correct"}
+                type={"checkbox"}
+                placeholder="Right Answer"
+              ></input>
+              Correct Answer
             </label>
           </div>
           <div>
             <input
+              name="optionMcq2"
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              placeholder="Enter Quiz Question"
+              placeholder="Enter Quiz answer"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>Enter
-              Option 2
+              <input
+                name="correctMcq2"
+                value={"correct"}
+                type={"checkbox"}
+                placeholder="Right Answer"
+              ></input>
+              Correct Answer
             </label>
           </div>
           <div>
             <input
+              name="optionMcq3"
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              placeholder="Enter Quiz Question"
+              placeholder="Enter Quiz answer"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>Enter
-              Option 3
+              <input
+                name="correctMcq3"
+                value={"correct"}
+                type={"checkbox"}
+                placeholder="Right Answer"
+              ></input>
+              Correct Answer
             </label>
           </div>
           <div>
             <input
+              name="optionMcq4"
               style={{ backgroundImage: "url(./maIcon1.png)" }}
-              placeholder="Enter Quiz Question"
+              placeholder="Enter Quiz answer"
             ></input>
             <label>
               {" "}
-              <input type={"checkbox"} placeholder="Right Answer"></input>Enter
-              Option 4
+              <input
+                name="correctMcq4"
+                value={"correct"}
+                type={"checkbox"}
+                placeholder="Right Answer"
+              ></input>
+              Correct Answer
             </label>
           </div>
-        </div>
+          <button type="submit" className={styles.btn}>
+            +
+          </button>
+        </form>
       )}
-    </>
+    </div>
   );
 }
 

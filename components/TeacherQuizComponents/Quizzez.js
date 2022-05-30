@@ -1,5 +1,14 @@
 import styles from "./Quizzez.module.css";
+import { useDispatch, useSelector } from "react-redux";
+import {useEffect, useState} from "react";
+import QuizzesQuestions from "./QuizzesQuestions";
+import EditQuizQuestions from "./EditQuizQuestion";
+
 function Quizzez(props) {
+
+  const quiz = useSelector((state) => {console.log(state.quiz);return state.quiz});
+
+
   const tableContent = [
     {
       qt: "Quiz Title",
@@ -58,6 +67,17 @@ function Quizzez(props) {
       q_s: "Scheduled - Published",
     },
   ];
+  
+  const [showTable,setShowTable]=useState(true);
+  const [showQuiz,setShowQuiz]=useState(false);
+  const [showEditQuiz,setShowEditQuiz]=useState(false);
+  const [id,setId]=useState();
+
+  useEffect(()=>{
+    setShowTable(true);
+    setShowQuiz(false)
+  },[])
+
 
   return (
     <div className={styles.Quizzez}>
@@ -72,7 +92,8 @@ function Quizzez(props) {
           </button>
         </div>
       </div>
-      <table>
+      {
+        <table>
         <tr className={styles.thead}>
           <div>
             <th>Quiz Title</th>
@@ -84,19 +105,28 @@ function Quizzez(props) {
           </div>
         </tr>
 
-        {tableContent.map((c) => {
+        {showQuiz && 
+            <QuizzesQuestions question={quiz[id]}/>
+        }
+
+        {showEditQuiz && 
+            <EditQuizQuestions question={quiz[id]}/>
+        }
+
+        {showTable &&
+        quiz.map((c) => {
           return (
             <tr key={""} className={styles.tbody}>
-              <td>{c.qt}</td>
-              <td>{c.c_g}</td>
-              <td>{c.c}</td>
+              <td>{c.title}</td>
+              <td>{c.className}</td>
+              <td>{c.course}</td>
 
-              <td>{c.q_s}</td>
+              <td>{"Scheduled - Published"}</td>
               <td>
-                <button>
+                <button onClick={(e)=>{setId(c.id);setShowTable(false);setShowQuiz(true);setShowEditQuiz(false)}}>
                   <img alt="" src="./actionEye.png" />
                 </button>
-                <button>
+                <button onClick={()=>{setId(c.id);setShowEditQuiz(true);setShowTable(false);setShowQuiz(false)}}>
                   <img alt="" src="./actionIcon.png" />
                 </button>
               </td>
@@ -104,6 +134,7 @@ function Quizzez(props) {
           );
         })}
       </table>
+      }
     </div>
   );
 }

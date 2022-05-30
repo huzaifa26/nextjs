@@ -2,12 +2,11 @@
     margin-top: 20px;
     background-color: #FFFFFF;
     width: 95%;
-    /* width: 100vw; */
     min-height: 782px;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-   
+    min-width: 1;
     /* overflow: auto; */
 }
 
@@ -129,13 +128,13 @@
     min-width: 60px;
 }
 
-.thead th:nth-child(5){
+.thead th:last-child{
    flex: 2;
    min-width: 200px;
    
 }
 
-.tbody td:nth-child(5){
+.tbody td:last-child{
     
     flex: 2;
    min-width: 200px;
@@ -190,3 +189,9 @@
 
 }
 
+
+
+
+.gradingDiv{
+    background-color: #023047 !important;
+}

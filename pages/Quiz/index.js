@@ -50,11 +50,9 @@ function Quiz(){
                         </button>
 
                     </div>
-                    {/* <div> */}
                         {upccomming && <Upcomming />}
                         {startedQuiz && <StartedQuiz />}
                         {completed && <CompletedQuiz />}
-                    {/* </div> */}
                 </div>
             </Layout>
 

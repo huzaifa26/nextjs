@@ -42,6 +42,8 @@ export const about = (data) => async (dispatch) => {
   });
   data.router.push("/profileDescription");
 };
+
+
 export const profileDescription = (data) => async (dispatch) => {
   try {
     const response = await userAbout(data);

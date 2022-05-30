@@ -8,6 +8,8 @@
     flex-direction: column;
     border-radius: 10px;
     overflow-x: auto;
+    position: relative;
+    z-index: 1;
 }
 
 .heading{
@@ -39,15 +41,16 @@
 .quizSection{
     max-width: 99%;
     width: 100vw;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-width: 400px;
+    position: relative;
+    flex:1;
 }
 
-.quizSection div:first-child{
+.quizSection div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,7 +77,12 @@
 .quizSection div{
     display: flex;
     width: clamp(300px,31.25vw,600px);
-    justify-content: space-between;
+    flex-direction: column;
+}
+
+.QuestionOuterDiv{
+    justify-content: flex-start !important;
+    margin-bottom: 120px;
 }
 
 .quizSection h3{
@@ -95,7 +103,6 @@
     border-radius: 25px;
     font-size: clamp(16px,1.25vw,24px);
     font-weight: bold;
-    margin-top: 150px;
 }
 
 .quizSection textarea{
@@ -114,9 +121,9 @@
 }
 
 .buttonDiv{
-    position: relative;
-    /* top: 72%; */
-    /* margin-top: 3%; */
+    flex-direction: row !important;
+    position: absolute;
+    bottom: 30px;
 }
 
 
@@ -126,6 +133,7 @@
     color: white;
     font-size: clamp(14px,1.0416vw,20px);
     position: relative;
+
 }
 
 .mcq{
@@ -141,13 +149,19 @@
 .ma{
     display: flex;
     flex-direction: column;
-    margin-bottom: -100px;
+    margin-bottom: 0px;
+    position: relative;
+    z-index: 2;
+
 }
 
 .ma input{
     margin: 10px 0px;
 }
-
+.quizSection div{
+    display: flex;
+    justify-content: space-around;
+}
 
 .quizSection label{
     display: flex;
@@ -184,6 +198,8 @@
 
 .ma div{
     border-bottom:1px solid #707070;
+    display: flex;
+    flex-direction: row;
 }
 
 .ma div input{
@@ -203,16 +219,31 @@
     line-height: 23px;
 }
 
+.quizSetting div{
+    display: flex;
+    flex-direction: row;
+    border-bottom:1px solid #707070;
+    height: 70px;
+}
+
 .quizSetting label{
-    margin: 15px 0px;
+    border: 0;
 }
 
 .quizSetting label p{
    width: 200px;
+   padding: 0;
+   margin: 0 !important;
 }
-.quizSetting label img{
-    margin-left: 310px;
+.quizSetting div img{
+    margin-right: 10px;
+    cursor: pointer;
 }
+
+.quizSetting input{
+    width: 20px;
+}
+
 .quizSection  input[type="number"]::-webkit-input-placeholder{
  margin-right: 10px;
 }
@@ -230,4 +261,80 @@
  width: 100%;
 }
     
+}
+
+
+.QuestionDiv button,.btn{
+    align-self: end;
+    width: 60px !important;
+    height: 40px !important;
+}
+
+.publishModal,.settingModal{
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    height: 300px;
+    width: 35vw;
+    min-width: 300px;
+    position: absolute;
+    top: 320px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #FFFFFF;
+    z-index: 100;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.publishModal > div{
+    display: flex;
+}
+
+.publishModal > div div{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.publishModal > div div{
+    margin: 0px 10px;
+}
+
+.publishModal >h2{
+    margin: 0px 10px;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+
+.publishModal div:last-child{
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.publishModal button{
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: 0;
+    border-radius: 15px;
+    font-weight: 800;
+    margin-top: 20px;
+
+}
+
+.publishModal button:last-child{
+    background-color: #FE6903;
+}
+
+.publishModal label{
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.publishModal input{
+    width: 220px;
 }
